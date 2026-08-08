@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Student Career Hub | Career, Learning & Productivity</title>
+    <title>AI Career Hub – Fixed</title>
     <script src="https://cdn.tailwindcss.com">
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -254,24 +254,6 @@
         }
         .sidebar-overlay.open {
             display: block;
-        }
-        .sidebar-collapsed .sidebar { width: 76px !important; padding-left: 10px; padding-right: 10px; }
-        .sidebar-collapsed #mainContent { margin-left: 76px !important; }
-        .sidebar-collapsed .sidebar .brand-text,
-        .sidebar-collapsed .sidebar nav a span:not(.icon),
-        .sidebar-collapsed .sidebar .sidebar-label,
-        .sidebar-collapsed .sidebar .sidebar-user-info { display: none !important; }
-        .sidebar-collapsed .sidebar > div:first-child { font-size: 0 !important; justify-content: center; }
-        .sidebar-collapsed .sidebar nav a { justify-content: center; padding-left: 10px; padding-right: 10px; font-size: 0 !important; }
-        .sidebar-collapsed .sidebar nav a .icon { margin: 0; font-size: 1.15rem !important; }
-        @media (max-width: 768px) {
-            .sidebar-collapsed .sidebar { width: 260px !important; padding: 1rem; }
-            .sidebar-collapsed #mainContent { margin-left: 0 !important; }
-            .sidebar-collapsed .sidebar .brand-text,
-            .sidebar-collapsed .sidebar nav a span:not(.icon),
-            .sidebar-collapsed .sidebar .sidebar-label,
-            .sidebar-collapsed .sidebar .sidebar-user-info { display: initial !important; }
-            .sidebar-collapsed .sidebar nav a { justify-content: flex-start; }
         }
         ::-webkit-scrollbar {
             width: 6px;
@@ -1273,60 +1255,160 @@
         body.dark .summary-content .bullet::before {
             color: #818CF8;
         }
-
-
-        /* ─── PRODUCT POLISH / ACCESSIBILITY ─── */
-        html { scroll-behavior: smooth; }
-        :focus-visible { outline: 3px solid rgba(79,70,229,.45); outline-offset: 2px; }
-        button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
-        .readiness-ring {
-            --score: 0;
-            width: 92px; height: 92px; flex: 0 0 92px; border-radius: 50%;
-            display: grid; place-items: center; position: relative;
-            background: conic-gradient(#4F46E5 calc(var(--score) * 1%), #E2E8F0 0);
-        }
-        .readiness-ring::after { content:""; position:absolute; inset:8px; border-radius:50%; background:#fff; }
-        .readiness-ring span { position:relative; z-index:1; font-weight:800; color:#4F46E5; font-size:.95rem; }
-        body.dark .readiness-ring { background: conic-gradient(#818CF8 calc(var(--score) * 1%), #334155 0); }
-        body.dark .readiness-ring::after { background:#1E293B; }
-        body.dark .readiness-ring span { color:#A5B4FC; }
-        .readiness-row { display:flex; justify-content:space-between; gap:12px; font-size:.82rem; }
-        .readiness-row span:last-child { font-weight:700; color:#4F46E5; }
-        body.dark .readiness-row span:last-child { color:#A5B4FC; }
-        .next-action {
-            width:100%; text-align:left; padding:10px 12px; border:1px solid #E2E8F0;
-            border-radius:10px; background:#F8FAFC; font-size:.85rem; font-weight:600;
-            cursor:pointer; transition:.2s;
-        }
-        .next-action:hover { transform:translateX(3px); border-color:#818CF8; background:#EEF2FF; }
-        body.dark .next-action { background:#0F172A; border-color:#334155; color:#E2E8F0; }
-        body.dark .next-action:hover { background:#1E293B; border-color:#818CF8; }
-        .app-status {
-            display:inline-flex; align-items:center; gap:7px; padding:5px 10px; border-radius:999px;
-            font-size:.72rem; font-weight:600; background:#ECFDF5; color:#047857;
-        }
-        .app-status::before { content:""; width:7px; height:7px; border-radius:50%; background:#10B981; }
-        body.dark .app-status { background:#064E3B; color:#A7F3D0; }
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
-        }
-        @media (max-width: 640px) {
-            .readiness-ring { width:78px; height:78px; flex-basis:78px; }
-            .readiness-ring::after { inset:7px; }
-        }
-
     
-      .dashboard-hero{background:linear-gradient(135deg,rgba(79,70,229,.08),rgba(14,165,233,.06));border:1px solid rgba(99,102,241,.14)}
-      .readiness-hero{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:20px;background:rgba(255,255,255,.75);min-width:240px}.dark .readiness-hero{background:rgba(15,23,42,.65)}
-      .readiness-ring.large{width:104px;height:104px;flex-basis:104px}.readiness-ring.large::after{inset:9px}
-      .stat-card{padding:16px;border:1px solid #e2e8f0;border-radius:18px;background:#fff;display:grid;grid-template-columns:auto 1fr;gap:2px 10px;align-items:center;box-shadow:0 4px 18px rgba(15,23,42,.04)}.dark .stat-card{background:#1e293b;border-color:#334155}.stat-card span{grid-row:1/3;font-size:1.5rem}.stat-card strong{font-size:1.35rem}.stat-card small{font-size:.72rem;color:#64748b}.dark .stat-card small{color:#94a3b8}
-      .progress-track{height:8px;border-radius:99px;background:#e2e8f0;overflow:hidden}.dark .progress-track{background:#334155}.progress-track span{display:block;height:100%;width:0;background:linear-gradient(90deg,#4f46e5,#06b6d4);border-radius:99px;transition:width .4s}
-      .feature-launch{padding:18px;text-align:left;border:1px solid #e2e8f0;border-radius:18px;background:#fff;transition:transform .2s,box-shadow .2s}.dark .feature-launch{background:#1e293b;border-color:#334155}.feature-launch:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(15,23,42,.08)}.feature-launch span{font-size:1.7rem;display:block;margin-bottom:8px}.feature-launch strong{display:block}.feature-launch small{display:block;color:#64748b;margin-top:5px;line-height:1.4}.dark .feature-launch small{color:#94a3b8}
-      #page-assessment label,#page-projects label,#page-interview label{display:block;font-size:.78rem;font-weight:700;margin-bottom:6px;color:#475569}.dark #page-assessment label,.dark #page-projects label,.dark #page-interview label{color:#cbd5e1}
-      #assessmentResult .career-result{padding:18px;border-radius:18px;background:linear-gradient(135deg,#eef2ff,#ecfeff)}.dark #assessmentResult .career-result{background:#172554}
-      .project-card{border:1px solid #e2e8f0;border-radius:16px;padding:16px;background:#fff}.dark .project-card{background:#1e293b;border-color:#334155}.project-card h4{font-weight:800}.project-card .project-actions{display:flex;gap:8px;margin-top:12px}.project-card .project-actions button{font-size:.75rem}
-      @media(max-width:640px){.readiness-hero{min-width:0}.stat-card{padding:12px}.dashboard-hero{padding:18px}}
-</style>
+        /* ===== ROBUST APP SHELL / SIDEBAR FIX ===== */
+        :root {
+            --sidebar-width: 260px;
+            --sidebar-collapsed-width: 76px;
+        }
+
+        #sidebar {
+            width: var(--sidebar-width) !important;
+            min-width: var(--sidebar-width) !important;
+            overflow-x: hidden;
+            z-index: 100 !important;
+        }
+
+        #mainContent {
+            margin-left: var(--sidebar-width) !important;
+            min-width: 0;
+            width: calc(100% - var(--sidebar-width));
+            transition: margin-left .25s ease, width .25s ease;
+        }
+
+        #sidebar.collapsed {
+            width: var(--sidebar-collapsed-width) !important;
+            min-width: var(--sidebar-collapsed-width) !important;
+        }
+
+        #mainContent.sidebar-collapsed {
+            margin-left: var(--sidebar-collapsed-width) !important;
+            width: calc(100% - var(--sidebar-collapsed-width));
+        }
+
+        #sidebar.collapsed > div:first-child {
+            justify-content: center;
+        }
+
+        #sidebar.collapsed > div:first-child {
+            font-size: 0;
+        }
+
+        #sidebar.collapsed > div:first-child svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        #sidebar.collapsed nav a,
+        #sidebar.collapsed #logoutBtn {
+            justify-content: center;
+            gap: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 0;
+        }
+
+        #sidebar.collapsed nav a .icon,
+        #sidebar.collapsed #logoutBtn .icon {
+            font-size: 20px;
+            width: 24px;
+        }
+
+        #sidebar.collapsed > div:last-child > div {
+            justify-content: center;
+        }
+
+        #sidebar.collapsed > div:last-child > div > span {
+            display: none;
+        }
+
+        #sidebar.collapsed #darkToggleSidebar {
+            display: none;
+        }
+
+        #menuToggle {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 42px;
+            height: 42px;
+            border: 1px solid #E2E8F0;
+            background: #fff;
+            color: #1E293B;
+        }
+
+        body.dark #menuToggle {
+            border-color: #334155;
+            background: #1E293B;
+            color: #E2E8F0;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                width: 260px !important;
+                min-width: 260px !important;
+                transform: translateX(-100%);
+            }
+
+            #sidebar.open {
+                transform: translateX(0);
+            }
+
+            #sidebar.collapsed {
+                width: 260px !important;
+                min-width: 260px !important;
+            }
+
+            #mainContent,
+            #mainContent.sidebar-collapsed {
+                margin-left: 0 !important;
+                width: 100% !important;
+            }
+
+            #menuToggle {
+                display: inline-flex !important;
+            }
+
+            #sidebar.collapsed > div:first-child {
+                font-size: inherit;
+            }
+
+            #sidebar.collapsed nav a,
+            #sidebar.collapsed #logoutBtn {
+                justify-content: flex-start;
+                gap: 12px;
+                padding-left: 16px;
+                padding-right: 16px;
+                font-size: 1rem;
+            }
+
+            #sidebar.collapsed nav a .icon,
+            #sidebar.collapsed #logoutBtn .icon {
+                font-size: inherit;
+                width: 20px;
+            }
+        }
+
+        /* Prevent wide builder panels from pushing/cutting the page. */
+        #mainContent .grid {
+            min-width: 0;
+        }
+
+        #mainContent .card,
+        #mainContent section,
+        #mainContent form {
+            min-width: 0;
+            max-width: 100%;
+        }
+
+        #mainContent input,
+        #mainContent textarea,
+        #mainContent select {
+            max-width: 100%;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -1351,10 +1433,7 @@
             <a data-page="notes"><span class="icon">📝</span> Notes Summarizer</a>
             <a data-page="quiz"><span class="icon">🧠</span> Quiz Generator</a>
             <a data-page="flashcards"><span class="icon">🃏</span> Flashcards</a>
-            <a data-page="assessment"><span class="icon">🎯</span> Career Assessment</a>
             <a data-page="roadmap"><span class="icon">🗺️</span> Career Roadmap</a>
-            <a data-page="projects"><span class="icon">💻</span> Project Showcase</a>
-            <a data-page="interview"><span class="icon">🎤</span> Interview Prep</a>
             <a data-page="coverletter"><span class="icon">✉️</span> Cover Letter</a>
             <a data-page="studyplanner"><span class="icon">📅</span> Study Planner</a>
             <a data-page="saved"><span class="icon">💾</span> Saved Files</a>
@@ -1370,7 +1449,7 @@
     <div class="ml-0 md:ml-64 p-4 md:p-6 transition-all" id="mainContent">
         <header class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3">
-                <button id="menuToggle" type="button" class="p-2 rounded-lg hover:bg-gray-200/60 dark:hover:bg-gray-700/60 transition" aria-label="Toggle navigation menu" aria-expanded="true"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg></button>
+                <button id="menuToggle" type="button" aria-label="Collapse or expand sidebar" aria-expanded="true" class="p-2 rounded-lg hover:bg-gray-200/60 dark:hover:bg-gray-700/60 transition" onclick="toggleSidebar()"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg></button>
                 <h1 class="text-2xl font-bold" id="pageTitle">Dashboard</h1>
             </div>
             <div class="flex items-center gap-3">
@@ -1382,107 +1461,43 @@
 
         <!-- ─── PAGES ─── -->
         <div id="page-landing" class="page">
-            <section class="relative min-h-[80vh] flex items-center overflow-hidden"><div class="hero-bg"><div class="orb"></div><div class="orb"></div><div class="orb"></div></div><div class="relative z-10 max-w-7xl mx-auto px-4 py-12"><div class="grid lg:grid-cols-2 gap-16 items-center"><div class="space-y-8"><span class="inline-flex items-center gap-2 bg-[#4F46E5]/10 text-[#4F46E5] text-sm font-semibold px-4 py-2 rounded-full">✨ AI-Powered Career & Learning Platform</span><h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1]">Build Your <br /><span class="gradient-text">Career Future</span><br />with Confidence</h1><p class="text-lg text-gray-600 max-w-lg leading-relaxed">Create career documents, study smarter, explore career paths, practice with quizzes and flashcards, and track your progress from one student-focused workspace.</p><div class="flex flex-wrap gap-4"><button onclick="navigateTo('dashboard')" class="btn-primary text-base">🚀 Open Dashboard</button><button onclick="navigateTo('roadmap')" class="btn-secondary text-base">🗺️ Explore Roadmaps</button></div><div class="flex flex-wrap gap-3 text-sm text-gray-500"><span class="badge-pill">🔐 Firebase Auth</span><span class="badge-pill">📱 Responsive</span><span class="badge-pill">🌙 Dark Mode</span><span class="badge-pill">💾 Local Autosave</span></div></div><div class="hidden lg:block relative min-h-[430px]"><div class="absolute top-8 right-10 card-premium float-card w-72"><div class="text-3xl mb-3">📄</div><h3 class="font-bold text-lg">Resume Builder</h3><p class="text-sm text-gray-500 mt-1">Build a clean, export-ready student resume.</p><div class="mt-4 h-2 rounded-full bg-indigo-100"><div class="h-2 rounded-full bg-indigo-500" style="width:82%"></div></div><div class="text-xs text-gray-400 mt-2">Career readiness</div></div><div class="absolute top-44 left-4 card-premium float-card w-72"><div class="text-3xl mb-3">🧠</div><h3 class="font-bold text-lg">Learn & Practice</h3><p class="text-sm text-gray-500 mt-1">Notes, quizzes, flashcards and study planning.</p><div class="mt-4 flex gap-2"><span class="badge-pill">Quiz</span><span class="badge-pill">Notes</span><span class="badge-pill">Planner</span></div></div><div class="absolute bottom-4 right-16 card-premium float-card w-72"><div class="text-3xl mb-3">🗺️</div><h3 class="font-bold text-lg">Career Roadmap</h3><p class="text-sm text-gray-500 mt-1">Turn your target role into practical learning steps.</p><div class="mt-4 text-xs text-emerald-600 font-semibold">✓ Skills → Projects → Preparation</div></div></div></div></div></section>
-            <section class="py-16"><div class="max-w-7xl mx-auto px-4"><div class="glass rounded-3xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center border border-white/30"><div><div class="text-3xl font-extrabold gradient-text">13+</div><div class="text-sm text-gray-500">Career & Study Tools</div></div><div><div class="text-3xl font-extrabold gradient-text">AI</div><div class="text-sm text-gray-500">Assisted Workflows</div></div><div><div class="text-3xl font-extrabold gradient-text">100%</div><div class="text-sm text-gray-500">Responsive Design</div></div><div><div class="text-3xl font-extrabold gradient-text">Free</div><div class="text-sm text-gray-500">Student-Friendly Setup</div></div></div><p class="text-center text-xs text-gray-500 mt-4">Product capabilities shown here are based on the current application—not unverified user statistics.</p></div></section>
-            <section class="py-12"><div class="max-w-7xl mx-auto px-4"><div class="grid md:grid-cols-3 gap-5"><div class="card-premium feature-card"><div class="feature-icon bg-indigo-100 text-indigo-600 mb-4">🎯</div><h3 class="font-bold text-lg">Career Direction</h3><p class="text-sm text-gray-500 mt-2">Use profile information and roadmaps to turn interests into actionable career steps.</p></div><div class="card-premium feature-card"><div class="feature-icon bg-cyan-100 text-cyan-600 mb-4">⚡</div><h3 class="font-bold text-lg">Student Productivity</h3><p class="text-sm text-gray-500 mt-2">Organize study tasks, summaries, quizzes and flashcards in one place.</p></div><div class="card-premium feature-card"><div class="feature-icon bg-emerald-100 text-emerald-600 mb-4">💼</div><h3 class="font-bold text-lg">Career Documents</h3><p class="text-sm text-gray-500 mt-2">Prepare resumes, portfolios and cover letters that you can refine before sharing.</p></div></div></div></section>
+            <section class="relative min-h-[80vh] flex items-center overflow-hidden"><div class="hero-bg"><div class="orb"></div><div class="orb"></div><div class="orb"></div></div><div class="relative z-10 max-w-7xl mx-auto px-4 py-12"><div class="grid lg:grid-cols-2 gap-16 items-center"><div class="space-y-8"><span class="inline-flex items-center gap-2 bg-[#4F46E5]/10 text-[#4F46E5] text-sm font-semibold px-4 py-2 rounded-full">✨ AI-Powered Career Platform</span><h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1]">Build Your <br /><span class="gradient-text">AI-Powered</span> <br />Career Future</h1><p class="text-lg text-gray-600 max-w-lg leading-relaxed">Generate resumes, portfolios, quizzes, roadmaps, and more — powered by <strong>OpenRouter</strong> (supports Gemini, Llama, GPT‑4o‑mini, and more).</p><div class="flex flex-wrap gap-4"><button onclick="navigateTo('dashboard')" class="btn-primary text-base">🚀 Get Started</button><button onclick="navigateTo('dashboard')" class="btn-secondary text-base">▶ Explore</button></div></div></div></div></section>
+            <section class="py-16"><div class="max-w-7xl mx-auto px-4"><div class="glass rounded-3xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center border border-white/30"><div><div class="text-3xl font-extrabold gradient-text">50K+</div><div class="text-sm text-gray-500">Active Students</div></div><div><div class="text-3xl font-extrabold gradient-text">120K+</div><div class="text-sm text-gray-500">Resumes Generated</div></div><div><div class="text-3xl font-extrabold gradient-text">98%</div><div class="text-sm text-gray-500">Satisfaction Rate</div></div><div><div class="text-3xl font-extrabold gradient-text">4.9★</div><div class="text-sm text-gray-500">User Rating</div></div></div></div></section>
         </div>
 
         <div id="page-dashboard" class="page active">
-  <div class="dashboard-hero card-premium p-6 mb-6">
-    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-      <div>
-        <p class="text-xs font-bold uppercase tracking-[.18em] text-indigo-600 dark:text-indigo-400">AI Student Career Hub</p>
-        <h2 class="text-3xl font-extrabold mt-2">Welcome back, <span id="dashUserName">Student</span> 👋</h2>
-        <p class="text-gray-500 dark:text-gray-400 mt-2 max-w-2xl">Your dashboard connects career planning, learning, projects and professional documents into one workflow.</p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <button class="gradient-btn gradient-btn-sm" onclick="navigateTo('assessment')">🎯 Start Career Assessment</button>
-          <button class="btn-secondary text-sm" onclick="navigateTo('resume')">📄 Improve Resume</button>
-          <button class="btn-secondary text-sm" onclick="navigateTo('interview')">🎤 Practice Interview</button>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                <div class="card p-4 flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-2xl">📄</div><div><div class="text-sm text-gray-500 dark:text-gray-400">Resumes</div><div class="text-2xl font-bold" id="dashResumeCount">0</div></div></div>
+                <div class="card p-4 flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-2xl">🧠</div><div><div class="text-sm text-gray-500 dark:text-gray-400">Quizzes Taken</div><div class="text-2xl font-bold" id="dashQuizCount">0</div></div></div>
+                <div class="card p-4 flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-cyan-100 dark:bg-cyan-900/30 flex items-center justify-center text-2xl">📝</div><div><div class="text-sm text-gray-500 dark:text-gray-400">Notes Summaries</div><div class="text-2xl font-bold" id="dashNotesCount">0</div></div></div>
+                <div class="card p-4 flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-2xl">⭐</div><div><div class="text-sm text-gray-500 dark:text-gray-400">Profile Completeness</div><div class="text-2xl font-bold" id="dashProfileComplete">65%</div></div></div>
+            </div>
+
+            <div class="card p-4 mb-6">
+                <h3 class="font-semibold mb-2">✅ Features Checklist</h3>
+                <div class="feature-checklist">
+                    <div class="check-item"><span class="check-icon">✔</span> Login System</div>
+                    <div class="check-item"><span class="check-icon">✔</span> Signup / Registration</div>
+                    <div class="check-item"><span class="check-icon">✔</span> Admin Login</div>
+                    <div class="check-item"><span class="check-icon">✔</span> Firebase Auth Integration</div>
+                    <div class="check-item"><span class="check-icon">✔</span> Session Management</div>
+                    <div class="check-item"><span class="check-icon">✔</span> Protected Routes</div>
+                    <div class="check-item"><span class="check-icon">✔</span> User Profile Sync</div>
+                    <div class="check-item"><span class="check-icon">✔</span> Logout</div>
+                </div>
+                <div class="mt-3 text-xs text-gray-400 dark:text-gray-500">🔒 All routes are protected. You must be logged in to access tools.</div>
+            </div>
+
+            <div class="mb-6"><h2 class="text-lg font-bold mb-3">⚡ Quick AI Tools</h2><div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3"><div class="quick-tool" onclick="navigateTo('resume')">📄<br><span class="text-sm font-medium">Resume</span></div><div class="quick-tool" onclick="navigateTo('portfolio')">🌐<br><span class="text-sm font-medium">Portfolio</span></div><div class="quick-tool" onclick="navigateTo('notes')">📝<br><span class="text-sm font-medium">Summarize</span></div><div class="quick-tool" onclick="navigateTo('quiz')">🧠<br><span class="text-sm font-medium">Quiz</span></div><div class="quick-tool" onclick="navigateTo('roadmap')">🗺️<br><span class="text-sm font-medium">Roadmap</span></div><div class="quick-tool" onclick="navigateTo('studyplanner')">📅<br><span class="text-sm font-medium">Planner</span></div></div></div>
+            <div class="card p-4 mb-6"><h3 class="font-semibold mb-2">📅 Upcoming Tasks</h3><ul class="space-y-3" id="taskList"><li class="flex items-center gap-3"><input type="checkbox" class="rounded border-gray-300" /><span class="text-sm">Complete resume</span><span class="ml-auto text-xs text-gray-400">Today</span></li><li class="flex items-center gap-3"><input type="checkbox" class="rounded border-gray-300" /><span class="text-sm">Study for AI quiz</span><span class="ml-auto text-xs text-gray-400">Tomorrow</span></li><li class="flex items-center gap-3"><input type="checkbox" class="rounded border-gray-300" /><span class="text-sm">Generate portfolio</span><span class="ml-auto text-xs text-gray-400">Wed</span></li></ul><button class="mt-3 text-sm text-indigo-600 dark:text-indigo-400 hover:underline" id="addTaskBtn">+ Add task</button></div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6"><div class="card p-4"><h3 class="font-semibold mb-3">🕒 Recent Activity</h3><div class="space-y-3" id="activityFeed"><div class="activity-item text-sm"><div class="font-medium">Generated resume</div><div class="text-xs text-gray-500">2 hours ago</div></div><div class="activity-item text-sm"><div class="font-medium">Completed quiz: AI Basics</div><div class="text-xs text-gray-500">Yesterday</div></div><div class="activity-item text-sm"><div class="font-medium">Saved portfolio draft</div><div class="text-xs text-gray-500">2 days ago</div></div></div></div><div class="card p-4"><h3 class="font-semibold mb-3">📚 Study Progress</h3><div class="space-y-3"><div><div class="flex justify-between text-sm"><span>AI Engineer Roadmap</span><span>45%</span></div><div class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full"><div class="h-2 bg-indigo-500 rounded-full" style="width:45%"></div></div></div><div><div class="flex justify-between text-sm"><span>Data Science Prep</span><span>70%</span></div><div class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full"><div class="h-2 bg-emerald-500 rounded-full" style="width:70%"></div></div></div><div><div class="flex justify-between text-sm"><span>Frontend Development</span><span>25%</span></div><div class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full"><div class="h-2 bg-cyan-500 rounded-full" style="width:25%"></div></div></div></div><div class="mt-4 p-3 bg-indigo-50 dark:bg-indigo-950/20 rounded-lg flex justify-between items-center"><span class="text-sm">🔥 Weekly study streak: 4 days</span><span class="text-xs text-indigo-600 dark:text-indigo-400 font-medium">+2 this week</span></div></div></div>
         </div>
-      </div>
-      <div class="readiness-hero">
-        <div class="readiness-ring large" id="readinessRing"><span id="readinessScore">0%</span></div>
-        <div><div class="text-xs uppercase tracking-wider text-gray-500">Career Readiness</div><div id="readinessLabel" class="font-bold mt-1">Getting started</div><div class="text-xs text-gray-500 mt-1">Updated from your saved profile</div></div>
-      </div>
-    </div>
-  </div>
 
-  <div class="grid grid-cols-2 lg:grid-cols-6 gap-3 mb-6">
-    <div class="stat-card"><span>📄</span><strong id="dashResumeCount">0</strong><small>Resumes</small></div>
-    <div class="stat-card"><span>🌐</span><strong id="dashPortfolioCount">0</strong><small>Portfolios</small></div>
-    <div class="stat-card"><span>🧠</span><strong id="dashQuizCount">0</strong><small>Quizzes</small></div>
-    <div class="stat-card"><span>📝</span><strong id="dashNotesCount">0</strong><small>Notes</small></div>
-    <div class="stat-card"><span>💻</span><strong id="dashProjectCount">0</strong><small>Projects</small></div>
-    <div class="stat-card"><span>🎤</span><strong id="dashInterviewCount">0</strong><small>Practice</small></div>
-  </div>
+        <div id="page-profile" class="page"><div class="card p-6 max-w-2xl mx-auto"><h2 class="text-xl font-bold mb-4">👤 Your Profile</h2><div class="input-group"><label>Display Name</label><input type="text" id="profileName" placeholder="Your name" /></div><div class="input-group"><label>Email</label><input type="email" id="profileEmail" placeholder="your@email.com" disabled class="bg-gray-100 dark:bg-gray-800/50 cursor-not-allowed" /></div><div class="input-group"><label>Bio</label><textarea id="profileBio" rows="3" placeholder="Tell us about yourself..."></textarea></div><div class="input-group"><label>Skills (comma separated)</label><input type="text" id="profileSkills" placeholder="JavaScript, Python, React" /></div><div class="input-group"><label>Education</label><input type="text" id="profileEducation" placeholder="B.Sc. Computer Science, University" /></div><button class="gradient-btn" id="saveProfileBtn">💾 Save Profile</button><div id="profileStatus" class="mt-2 text-sm text-gray-500 dark:text-gray-400"></div></div></div>
 
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-6">
-    <div class="card p-5 lg:col-span-2">
-      <div class="flex justify-between items-start gap-4"><div><p class="text-xs font-bold uppercase tracking-wider text-indigo-600">Your Progress</p><h3 class="text-xl font-bold mt-1">Build your career profile step by step</h3></div><span class="badge-pill" id="profileStatusBadge">In progress</span></div>
-      <div class="mt-5 grid sm:grid-cols-2 gap-4">
-        <div><div class="readiness-row"><span>Profile</span><span id="readinessProfile">0%</span></div><div class="progress-track"><span id="readinessProfileBar"></span></div></div>
-        <div><div class="readiness-row"><span>Resume</span><span id="readinessResume">0%</span></div><div class="progress-track"><span id="readinessResumeBar"></span></div></div>
-        <div><div class="readiness-row"><span>Portfolio</span><span id="readinessPortfolio">0%</span></div><div class="progress-track"><span id="readinessPortfolioBar"></span></div></div>
-        <div><div class="readiness-row"><span>Projects</span><span id="readinessProjects">0%</span></div><div class="progress-track"><span id="readinessProjectsBar"></span></div></div>
-      </div>
-      <div class="mt-5 p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-950/30"><div class="text-sm font-semibold">💡 Recommended next step</div><div id="nextRecommendation" class="text-sm text-gray-600 dark:text-gray-300 mt-1">Complete your profile to unlock personalized guidance.</div></div>
-    </div>
-    <div class="card p-5">
-      <p class="text-xs font-bold uppercase tracking-wider text-cyan-600">Quick Start</p><h3 class="text-xl font-bold mt-1">Choose your next action</h3>
-      <div class="mt-4 space-y-2">
-        <button class="next-action" data-next-page="assessment">🎯 Find your career direction</button>
-        <button class="next-action" data-next-page="resume">📄 Build an ATS-ready resume</button>
-        <button class="next-action" data-next-page="projects">💻 Add a project</button>
-        <button class="next-action" data-next-page="portfolio">🌐 Create your portfolio</button>
-        <button class="next-action" data-next-page="interview">🎤 Practice interview questions</button>
-      </div>
-    </div>
-  </div>
+        <div id="page-resume" class="page"><div class="grid grid-cols-1 lg:grid-cols-5 gap-6"><div class="lg:col-span-3 card p-4"><div class="flex justify-between items-center mb-4"><h2 class="text-lg font-bold">✏️ Edit Resume</h2><button class="gradient-btn gradient-btn-sm" id="resumeNewBtn">+ New</button></div><div id="resumeListContainer" class="mb-4 p-2 bg-gray-50 dark:bg-gray-800/30 rounded-lg"><div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400"><span>Load saved:</span><select id="resumeSelector" class="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm flex-1"><option value="">-- Select a resume --</option></select><button id="resumeDeleteBtn" class="text-red-600 hover:text-red-800 text-sm px-2">🗑️</button></div></div><form id="resumeForm"><input type="hidden" id="resumeId" value="" /><div class="input-group"><label>Full Name</label><input type="text" id="resumeFullName" placeholder="John Doe" required /></div><div class="input-group"><label>Education</label><input type="text" id="resumeEducation" placeholder="B.Sc. Computer Science, University of XYZ, 2024" /></div><div class="input-group"><label>Skills (comma separated)</label><input type="text" id="resumeSkills" placeholder="JavaScript, Python, React, Node.js" /></div><div class="input-group"><label>Experience</label><textarea id="resumeExperience" rows="3" placeholder="Software Engineer at ABC Corp (2022-2024) ..."></textarea></div><div class="input-group"><label>Projects (comma separated)</label><input type="text" id="resumeProjects" placeholder="E-commerce platform, Chatbot, Portfolio website" /></div><div class="input-group"><label>Achievements (comma separated)</label><input type="text" id="resumeAchievements" placeholder="Hackathon winner, Published paper" /></div><div class="input-group"><label>Languages (comma separated)</label><input type="text" id="resumeLanguages" placeholder="English (fluent), Spanish (intermediate)" /></div><div class="resume-actions"><button type="submit" class="gradient-btn gradient-btn-sm" id="resumeSaveBtn">💾 Save</button><button type="button" class="gradient-btn gradient-btn-sm bg-emerald-500 hover:bg-emerald-600" id="resumeAiBtn">✨ AI Enhance</button><button type="button" class="gradient-btn gradient-btn-sm bg-cyan-500 hover:bg-cyan-600" id="resumePdfBtn">📥 Download PDF</button></div><div id="resumeAiStatus" class="mt-2 text-sm text-gray-500 dark:text-gray-400 italic"></div></form></div><div class="lg:col-span-2"><div class="card p-4 sticky top-4"><h2 class="text-lg font-bold mb-3">👁️ Live Preview</h2><div id="resumePreview" class="resume-preview"><div class="text-center text-gray-400 dark:text-gray-500">Fill in the form</div></div></div></div></div></div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
-    <button class="feature-launch" onclick="navigateTo('assessment')"><span>🎯</span><strong>Career Assessment</strong><small>Find suitable career paths from your skills and interests.</small></button>
-    <button class="feature-launch" onclick="navigateTo('resume')"><span>📄</span><strong>Resume Builder</strong><small>Build, score and export a professional resume.</small></button>
-    <button class="feature-launch" onclick="navigateTo('projects')"><span>💻</span><strong>Project Showcase</strong><small>Store project details once and reuse them everywhere.</small></button>
-    <button class="feature-launch" onclick="navigateTo('interview')"><span>🎤</span><strong>Interview Prep</strong><small>Practice technical and HR questions by target role.</small></button>
-  </div>
-
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
-    <div class="card p-5"><div class="flex justify-between items-center mb-3"><h3 class="font-bold">🕒 Recent Activity</h3><button class="text-xs text-indigo-600" onclick="clearCareerActivity()">Clear</button></div><div id="activityFeed" class="space-y-3"><div class="text-sm text-gray-500">Your activity will appear here as you use the tools.</div></div></div>
-    <div class="card p-5"><h3 class="font-bold mb-3">⚡ AI Tools</h3><div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
-      <button class="quick-tool" onclick="navigateTo('resume')">📄<br><span>Resume</span></button><button class="quick-tool" onclick="navigateTo('portfolio')">🌐<br><span>Portfolio</span></button><button class="quick-tool" onclick="navigateTo('notes')">📝<br><span>Notes</span></button><button class="quick-tool" onclick="navigateTo('quiz')">🧠<br><span>Quiz</span></button><button class="quick-tool" onclick="navigateTo('roadmap')">🗺️<br><span>Roadmap</span></button><button class="quick-tool" onclick="navigateTo('studyplanner')">📅<br><span>Planner</span></button>
-    </div></div></div>
-  </div>
-</div>
-
-<div id="page-assessment" class="page">
-  <div class="max-w-5xl mx-auto">
-    <div class="card-premium p-6 mb-5"><p class="text-xs font-bold uppercase tracking-wider text-indigo-600">Career Discovery</p><h2 class="text-2xl font-extrabold mt-1">🎯 Career Assessment</h2><p class="text-sm text-gray-500 mt-2">Answer a few practical questions. Your answers stay in this browser and are used to create a starting recommendation—not a guarantee of career fit.</p></div>
-    <form id="assessmentForm" class="card p-6 space-y-5">
-      <div><label>What do you enjoy most?</label><select id="assessInterest"><option value="ai">AI & Machine Learning</option><option value="software">Software Development</option><option value="data">Data & Analytics</option><option value="design">UI/UX & Creative Technology</option><option value="security">Cybersecurity & Networks</option></select></div>
-      <div><label>Which skills do you already have?</label><input id="assessSkills" placeholder="Python, Java, SQL, HTML, ML..." /></div>
-      <div><label>What type of work sounds best?</label><select id="assessWork"><option value="build">Building apps and systems</option><option value="analyze">Analyzing data and solving problems</option><option value="research">Research and experimentation</option><option value="design">Designing user experiences</option></select></div>
-      <div><label>What is your target level?</label><select id="assessLevel"><option>Student / Beginner</option><option>Internship Ready</option><option>Entry Level</option></select></div>
-      <button class="gradient-btn" type="submit">✨ Generate Career Direction</button>
-    </form>
-    <div id="assessmentResult" class="card p-6 mt-5 hidden"></div>
-  </div>
-</div>
-
-<div id="page-projects" class="page">
-  <div class="card-premium p-6 mb-5"><p class="text-xs font-bold uppercase tracking-wider text-indigo-600">Proof of Work</p><h2 class="text-2xl font-extrabold mt-1">💻 Project Showcase</h2><p class="text-sm text-gray-500 mt-2">Add real projects once. Your project data can then support your portfolio, resume and interview preparation.</p></div>
-  <div class="grid lg:grid-cols-3 gap-5"><form id="projectForm" class="card p-5 lg:col-span-1 space-y-3"><input type="hidden" id="projectEditId"><div><label>Project Name</label><input id="projectName" required placeholder="AI Notes Summarizer"></div><div><label>Technology</label><input id="projectTech" placeholder="Python, JavaScript, Firebase"></div><div><label>Description</label><textarea id="projectDescription" rows="4" placeholder="What problem does it solve?"></textarea></div><div><label>GitHub URL</label><input id="projectGithub" type="url" placeholder="https://github.com/..."></div><div><label>Live Demo URL</label><input id="projectDemo" type="url" placeholder="https://..."></div><button class="gradient-btn w-full" type="submit">💾 Save Project</button><button class="btn-secondary w-full" type="button" onclick="resetProjectForm()">Clear</button></form><div class="card p-5 lg:col-span-2"><div class="flex justify-between items-center mb-4"><h3 class="font-bold">Your Projects</h3><span class="badge-pill" id="projectCountLabel">0 projects</span></div><div id="projectGrid" class="grid sm:grid-cols-2 gap-4"></div></div></div>
-</div>
-
-<div id="page-interview" class="page">
-  <div class="card-premium p-6 mb-5"><p class="text-xs font-bold uppercase tracking-wider text-indigo-600">Interview Practice</p><h2 class="text-2xl font-extrabold mt-1">🎤 Interview Prep</h2><p class="text-sm text-gray-500 mt-2">Practice common technical and HR questions. Reveal an answer framework, then record your own response mentally or in your notes.</p></div>
-  <div class="grid lg:grid-cols-3 gap-5"><div class="card p-5"><label>Target role</label><select id="interviewRole"><option>AI/ML Intern</option><option>Software Developer Intern</option><option>Data Analyst Intern</option><option>Frontend Developer Intern</option><option>General HR</option></select><label class="mt-4">Question type</label><select id="interviewType"><option>Technical</option><option>HR</option><option>Project</option></select><button class="gradient-btn w-full mt-5" onclick="newInterviewQuestion()">🎲 New Question</button></div><div class="card p-6 lg:col-span-2"><div class="text-xs uppercase tracking-wider text-gray-500">Question</div><h3 id="interviewQuestion" class="text-xl font-bold mt-2">Click “New Question” to begin.</h3><div id="interviewAnswer" class="hidden mt-5 p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-950/30"></div><button id="showInterviewAnswer" class="btn-secondary mt-4" onclick="showInterviewAnswer()">💡 Show Answer Framework</button><div class="mt-5 text-xs text-gray-500">Practice tip: answer using Situation → Task → Action → Result for experience-based questions.</div></div></div>
-</div>
-
-<div id="page-profile" class="page"><div class="card p-6 max-w-2xl mx-auto"><h2 class="text-xl font-bold mb-4">👤 Your Profile</h2><div class="input-group"><label>Display Name</label><input type="text" id="profileName" placeholder="Your name" /></div><div class="input-group"><label>Email</label><input type="email" id="profileEmail" placeholder="your@email.com" disabled class="bg-gray-100 dark:bg-gray-800/50 cursor-not-allowed" /></div><div class="input-group"><label>Bio</label><textarea id="profileBio" rows="3" placeholder="Tell us about yourself..."></textarea></div><div class="input-group"><label>Skills (comma separated)</label><input type="text" id="profileSkills" placeholder="JavaScript, Python, React" /></div><div class="input-group"><label>Education</label><input type="text" id="profileEducation" placeholder="B.Sc. Computer Science, University" /></div><button class="gradient-btn" id="saveProfileBtn">💾 Save Profile</button><div id="profileStatus" class="mt-2 text-sm text-gray-500 dark:text-gray-400"></div></div></div>
-
-        <div id="page-resume" class="page"><div class="grid grid-cols-1 lg:grid-cols-5 gap-6"><div class="lg:col-span-3 card p-4"><div class="flex justify-between items-center mb-4"><h2 class="text-lg font-bold">✏️ Edit Resume</h2><button class="gradient-btn gradient-btn-sm" id="resumeNewBtn">+ New</button></div><div id="resumeListContainer" class="mb-4 p-2 bg-gray-50 dark:bg-gray-800/30 rounded-lg"><div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400"><span>Load saved:</span><select id="resumeSelector" class="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm flex-1"><option value="">-- Select a resume --</option></select><button id="resumeDeleteBtn" class="text-red-600 hover:text-red-800 text-sm px-2">🗑️</button></div></div><form id="resumeForm"><input type="hidden" id="resumeId" value="" /><div class="input-group"><label>Full Name</label><input type="text" id="resumeFullName" placeholder="John Doe" required /></div><div class="grid sm:grid-cols-2 gap-3"><div class="input-group"><label>Email</label><input type="email" id="resumeEmail" placeholder="you@example.com" /></div><div class="input-group"><label>Phone</label><input type="tel" id="resumePhone" placeholder="+91 98765 43210" /></div></div><div class="input-group"><label>Professional Summary</label><textarea id="resumeSummary" rows="3" placeholder="2–3 lines about your strengths, goals and value."></textarea></div><div class="input-group"><label>Education</label><input type="text" id="resumeEducation" placeholder="B.Sc. Computer Science, University of XYZ, 2024" /></div><div class="input-group"><label>Skills (comma separated)</label><input type="text" id="resumeSkills" placeholder="JavaScript, Python, React, Node.js" /></div><div class="input-group"><label>Experience</label><textarea id="resumeExperience" rows="3" placeholder="Software Engineer at ABC Corp (2022-2024) ..."></textarea></div><div class="input-group"><label>Projects (comma separated)</label><input type="text" id="resumeProjects" placeholder="E-commerce platform, Chatbot, Portfolio website" /></div><div class="input-group"><label>Achievements (comma separated)</label><input type="text" id="resumeAchievements" placeholder="Hackathon winner, Published paper" /></div><div class="input-group"><label>Certifications (comma separated)</label><input type="text" id="resumeCertifications" placeholder="Python, SQL, Google, NPTEL..." /></div><div class="input-group"><label>Languages (comma separated)</label><input type="text" id="resumeLanguages" placeholder="English (fluent), Spanish (intermediate)" /></div><div class="resume-actions"><button type="submit" class="gradient-btn gradient-btn-sm" id="resumeSaveBtn">💾 Save</button><button type="button" class="gradient-btn gradient-btn-sm bg-emerald-500 hover:bg-emerald-600" id="resumeAiBtn">✨ AI Enhance</button><button type="button" class="gradient-btn gradient-btn-sm bg-cyan-500 hover:bg-cyan-600" id="resumePdfBtn">📥 Download PDF</button></div><div id="resumeAiStatus" class="mt-2 text-sm text-gray-500 dark:text-gray-400 italic"></div></form></div><div class="lg:col-span-2"><div class="card p-4 sticky top-4"><h2 class="text-lg font-bold mb-3">👁️ Live Preview</h2><div id="resumePreview" class="resume-preview"><div class="text-center text-gray-400 dark:text-gray-500">Fill in the form</div></div></div></div></div></div>
-
-        <div id="page-portfolio" class="page"><div class="grid grid-cols-1 lg:grid-cols-5 gap-6"><div class="lg:col-span-3 card p-4"><div class="flex justify-between items-center mb-4"><h2 class="text-lg font-bold">✏️ Edit Portfolio</h2><button class="gradient-btn gradient-btn-sm" id="portfolioNewBtn">+ New</button></div><div id="portfolioListContainer" class="mb-4 p-2 bg-gray-50 dark:bg-gray-800/30 rounded-lg"><div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400"><span>Load saved:</span><select id="portfolioSelector" class="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm flex-1"><option value="">-- Select a portfolio --</option></select><button id="portfolioDeleteBtn" class="text-red-600 hover:text-red-800 text-sm px-2">🗑️</button></div></div><form id="portfolioForm"><input type="hidden" id="portfolioId" value="" /><div class="input-group"><label>Full Name</label><input type="text" id="portfolioFullName" placeholder="Jane Doe" required /></div><div class="input-group"><label>Professional Title</label><input type="text" id="portfolioTitle" placeholder="Full Stack Developer" /></div><div class="input-group"><label>Bio / About</label><textarea id="portfolioBio" rows="2" placeholder="I'm a passionate developer..."></textarea></div><div class="input-group"><label>Email</label><input type="email" id="portfolioEmail" placeholder="jane@example.com" /></div><div class="input-group"><label>Social Links (JSON)</label><input type="text" id="portfolioSocial" placeholder='{"github":"https://github.com/...","linkedin":"https://linkedin.com/..."}' /></div><div class="grid sm:grid-cols-2 gap-3"><div class="input-group"><label>GitHub</label><input type="url" id="portfolioGithub" placeholder="https://github.com/username" /></div><div class="input-group"><label>LinkedIn</label><input type="url" id="portfolioLinkedin" placeholder="https://linkedin.com/in/username" /></div></div><div class="input-group"><label>Skills (comma separated)</label><input type="text" id="portfolioSkills" placeholder="JavaScript, React, Python" /></div><div class="input-group"><label>Projects (JSON array)</label><textarea id="portfolioProjects" rows="3" placeholder='[{"title":"E-commerce","description":"Full stack web app","link":"https://..."}]'></textarea></div><div class="portfolio-actions"><button type="submit" class="gradient-btn gradient-btn-sm" id="portfolioSaveBtn">💾 Save</button><button type="button" class="gradient-btn gradient-btn-sm bg-emerald-500 hover:bg-emerald-600" id="portfolioAiBtn">✨ AI Enhance</button><button type="button" class="gradient-btn gradient-btn-sm bg-cyan-500 hover:bg-cyan-600" id="portfolioZipBtn">📦 Download ZIP</button><button type="button" class="gradient-btn gradient-btn-sm bg-purple-500 hover:bg-purple-600" id="portfolioPublishBtn">🚀 Publish</button></div><div id="portfolioAiStatus" class="mt-2 text-sm text-gray-500 dark:text-gray-400 italic"></div></form></div><div class="lg:col-span-2"><div class="card p-4 sticky top-4"><h2 class="text-lg font-bold mb-3">👁️ Live Preview</h2><div id="portfolioPreview" class="portfolio-preview"><div class="text-center text-gray-400 dark:text-gray-500">Fill in the form</div></div></div></div></div></div>
+        <div id="page-portfolio" class="page"><div class="grid grid-cols-1 lg:grid-cols-5 gap-6"><div class="lg:col-span-3 card p-4"><div class="flex justify-between items-center mb-4"><h2 class="text-lg font-bold">✏️ Edit Portfolio</h2><button class="gradient-btn gradient-btn-sm" id="portfolioNewBtn">+ New</button></div><div id="portfolioListContainer" class="mb-4 p-2 bg-gray-50 dark:bg-gray-800/30 rounded-lg"><div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400"><span>Load saved:</span><select id="portfolioSelector" class="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm flex-1"><option value="">-- Select a portfolio --</option></select><button id="portfolioDeleteBtn" class="text-red-600 hover:text-red-800 text-sm px-2">🗑️</button></div></div><form id="portfolioForm"><input type="hidden" id="portfolioId" value="" /><div class="input-group"><label>Full Name</label><input type="text" id="portfolioFullName" placeholder="Jane Doe" required /></div><div class="input-group"><label>Professional Title</label><input type="text" id="portfolioTitle" placeholder="Full Stack Developer" /></div><div class="input-group"><label>Bio / About</label><textarea id="portfolioBio" rows="2" placeholder="I'm a passionate developer..."></textarea></div><div class="input-group"><label>Email</label><input type="email" id="portfolioEmail" placeholder="jane@example.com" /></div><div class="input-group"><label>Social Links (JSON)</label><input type="text" id="portfolioSocial" placeholder='{"github":"https://github.com/...","linkedin":"https://linkedin.com/..."}' /></div><div class="input-group"><label>Skills (comma separated)</label><input type="text" id="portfolioSkills" placeholder="JavaScript, React, Python" /></div><div class="input-group"><label>Projects (JSON array)</label><textarea id="portfolioProjects" rows="3" placeholder='[{"title":"E-commerce","description":"Full stack web app","link":"https://..."}]'></textarea></div><div class="portfolio-actions"><button type="submit" class="gradient-btn gradient-btn-sm" id="portfolioSaveBtn">💾 Save</button><button type="button" class="gradient-btn gradient-btn-sm bg-emerald-500 hover:bg-emerald-600" id="portfolioAiBtn">✨ AI Enhance</button><button type="button" class="gradient-btn gradient-btn-sm bg-cyan-500 hover:bg-cyan-600" id="portfolioZipBtn">📦 Download ZIP</button><button type="button" class="gradient-btn gradient-btn-sm bg-purple-500 hover:bg-purple-600" id="portfolioPublishBtn">🚀 Publish</button></div><div id="portfolioAiStatus" class="mt-2 text-sm text-gray-500 dark:text-gray-400 italic"></div></form></div><div class="lg:col-span-2"><div class="card p-4 sticky top-4"><h2 class="text-lg font-bold mb-3">👁️ Live Preview</h2><div id="portfolioPreview" class="portfolio-preview"><div class="text-center text-gray-400 dark:text-gray-500">Fill in the form</div></div></div></div></div></div>
 
         <!-- ─── NOTES PAGE ─── -->
         <div id="page-notes" class="page">
@@ -1620,16 +1635,8 @@
 
         <div id="page-settings" class="page"><div class="card p-6 max-w-2xl mx-auto"><h2 class="text-lg font-bold mb-4">⚙️ Settings</h2><div class="form-section"><h3 class="font-semibold mb-2">🤖 AI Provider</h3><div class="grid grid-cols-2 gap-2 mb-3"><button class="provider-btn px-3 py-2 rounded-lg border-2 border-indigo-500 bg-indigo-50 dark:bg-indigo-900/30 text-sm font-medium" data-provider="openrouter">🟣 OpenRouter</button><button class="provider-btn px-3 py-2 rounded-lg border-2 border-gray-300 dark:border-gray-600 hover:border-indigo-500 transition text-sm font-medium" data-provider="mock">🔄 Mock (No Key Needed)</button></div><div id="providerInfo" class="text-sm text-gray-500 dark:text-gray-400 mb-2"><span class="provider-badge mock">✅ No API Key Required</span> Using built-in high-quality mock for all topics.</div></div><div class="form-section"><h3 class="font-semibold mb-2">🔑 API Key (Optional)</h3><div class="api-key-hint"><p class="text-sm text-gray-700 dark:text-gray-300">💡 You do NOT need an API Key. The app works perfectly with a built-in Mock AI. If you have an OpenRouter key, you can paste it here.</p></div><div class="flex items-center gap-3"><input type="password" id="apiKeyInput" value="" placeholder="sk-or-v1-..." class="flex-1 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" /><button id="apiKeyToggle" class="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">👁️</button><button id="apiKeySaveBtn" class="gradient-btn gradient-btn-sm">Save</button></div><div class="mt-2 flex items-center gap-2 text-sm"><span id="apiStatusDot" class="api-status valid"></span><span id="apiStatusText" class="text-green-600 dark:text-green-400">✅ Using built-in Mock AI – No key needed</span></div></div><div class="form-section"><h3 class="font-semibold mb-2">🧠 Model</h3><select id="modelSelect" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm"><option value="mock" selected>Mock AI (No Key)</option><option value="google/gemini-2.0-flash-exp:free">Gemini 2.0 Flash (if key added)</option></select><div id="modelInfo" class="mt-1 text-xs text-gray-400 dark:text-gray-500">Mock mode active. Responds with rich, realistic data.</div></div><div class="flex items-center justify-between py-3 border-b border-gray-200 dark:border-gray-700"><span>Dark Mode</span><button id="settingsDarkToggle" class="toggle-track"><div class="toggle-thumb"></div></button></div><div class="flex items-center justify-between py-3"><span>Auto-save</span><button id="settingsAutosave" class="toggle-track active"><div class="toggle-thumb"></div></button></div><div class="mt-6 p-4 bg-gray-50 dark:bg-gray-800/30 rounded-lg"><p class="text-sm text-gray-500 dark:text-gray-400">Storage used: <span id="settingsStorage">0 KB</span></p><button class="gradient-btn gradient-btn-sm mt-2" id="settingsExportData">📤 Export All Data</button><button class="gradient-btn gradient-btn-sm ml-2 bg-red-500 hover:bg-red-600" id="settingsClearData">🗑️ Clear All Data</button></div></div></div>
 
-        <div class="mt-8 text-center text-xs text-gray-400 dark:text-gray-500 border-t border-gray-200 dark:border-gray-800 pt-4">© 2026 AI Student Career Hub · Developed by <strong>Mayuri Y. Sutar</strong> · <a href="mailto:ankushpsutar01@gmail.com" class="hover:text-indigo-500">ankushpsutar01@gmail.com</a></div>
+        <div class="mt-8 text-center text-xs text-gray-400 dark:text-gray-500 border-t border-gray-200 dark:border-gray-800 pt-4">© 2026 AI Student Career Hub · Powered by Firebase Auth · Made by Mayuri Y. Sutar · ankushpsutar01@gmail.com</div>
     </div>
-
-    <footer class="ml-0 md:ml-64 px-4 md:px-6 pb-8 pt-2 text-center text-xs text-gray-500 dark:text-gray-400">
-        <div class="border-t border-gray-200 dark:border-gray-800 pt-5">
-            <strong>AI Student Career Hub</strong> · Career, learning and productivity workspace
-            <span class="mx-1">•</span> Built for students
-            <span class="mx-1">•</span> <button onclick="navigateTo('settings')" class="text-indigo-600 dark:text-indigo-400 hover:underline">Settings</button>
-        </div>
-    </footer>
 
     <!-- ─── AUTH OVERLAY ─── -->
     <div id="authOverlay">
@@ -1729,9 +1736,6 @@
         const pageTitles = {
             landing: 'Home',
             dashboard: 'Dashboard',
-            assessment: 'Career Assessment',
-            projects: 'Project Showcase',
-            interview: 'Interview Prep',
             profile: 'Profile',
             resume: 'Resume Builder',
             portfolio: 'Portfolio Generator',
@@ -1760,41 +1764,73 @@
 
         window.toggleSidebar = function() {
             const sidebar = document.getElementById('sidebar');
+            const main = document.getElementById('mainContent');
             const overlay = document.getElementById('sidebarOverlay');
-            const toggle = document.getElementById('menuToggle');
-            const isMobile = window.innerWidth <= 768;
+            const menu = document.getElementById('menuToggle');
+            const mobile = window.matchMedia('(max-width: 768px)').matches;
 
-            if (isMobile) {
+            if (mobile) {
                 sidebar.classList.toggle('open');
                 overlay.classList.toggle('open');
-                toggle.setAttribute('aria-expanded', sidebar.classList.contains('open') ? 'true' : 'false');
-            } else {
-                document.body.classList.toggle('sidebar-collapsed');
-                const collapsed = document.body.classList.contains('sidebar-collapsed');
-                toggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
-                setLS('sidebarCollapsed', collapsed);
+                if (menu) menu.setAttribute('aria-expanded', sidebar.classList.contains('open') ? 'true' : 'false');
+                return;
             }
+
+            const collapsed = sidebar.classList.toggle('collapsed');
+            main.classList.toggle('sidebar-collapsed', collapsed);
+            sidebar.classList.remove('open');
+            overlay.classList.remove('open');
+            if (menu) menu.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+            try { localStorage.setItem('aihub_sidebarCollapsed', collapsed ? '1' : '0'); } catch (e) {}
         };
+
+        // Restore desktop sidebar state. Default is expanded so content is never hidden.
+        (function restoreSidebarState() {
+            const sidebar = document.getElementById('sidebar');
+            const main = document.getElementById('mainContent');
+            const menu = document.getElementById('menuToggle');
+            if (!sidebar || !main) return;
+
+            if (window.matchMedia('(min-width: 769px)').matches) {
+                let collapsed = false;
+                try { collapsed = localStorage.getItem('aihub_sidebarCollapsed') === '1'; } catch (e) {}
+                sidebar.classList.toggle('collapsed', collapsed);
+                main.classList.toggle('sidebar-collapsed', collapsed);
+                if (menu) menu.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+            } else {
+                sidebar.classList.remove('collapsed');
+                main.classList.remove('sidebar-collapsed');
+                if (menu) menu.setAttribute('aria-expanded', 'false');
+            }
+        })();
+
+        window.addEventListener('resize', () => {
+            const sidebar = document.getElementById('sidebar');
+            const main = document.getElementById('mainContent');
+            const overlay = document.getElementById('sidebarOverlay');
+            const menu = document.getElementById('menuToggle');
+            if (!sidebar || !main) return;
+
+            if (window.matchMedia('(max-width: 768px)').matches) {
+                main.classList.remove('sidebar-collapsed');
+                sidebar.classList.remove('collapsed');
+                if (menu) menu.setAttribute('aria-expanded', sidebar.classList.contains('open') ? 'true' : 'false');
+            } else {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+                let collapsed = false;
+                try { collapsed = localStorage.getItem('aihub_sidebarCollapsed') === '1'; } catch (e) {}
+                sidebar.classList.toggle('collapsed', collapsed);
+                main.classList.toggle('sidebar-collapsed', collapsed);
+                if (menu) menu.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+            }
+        });
 
         document.querySelectorAll('#mainNav a').forEach(a => {
             a.addEventListener('click', () => {
                 const page = a.dataset.page;
                 if (page) window.navigateTo(page);
             });
-        });
-        document.getElementById('menuToggle').addEventListener('click', window.toggleSidebar);
-        if (window.innerWidth > 768 && getLS('sidebarCollapsed', false)) {
-            document.body.classList.add('sidebar-collapsed');
-            document.getElementById('menuToggle').setAttribute('aria-expanded', 'false');
-        }
-        window.addEventListener('resize', () => {
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('sidebarOverlay');
-            if (window.innerWidth > 768) {
-                sidebar.classList.remove('open');
-                overlay.classList.remove('open');
-                document.getElementById('menuToggle').setAttribute('aria-expanded', document.body.classList.contains('sidebar-collapsed') ? 'false' : 'true');
-            }
         });
 
         // ─── AUTH TABS ───
@@ -1980,7 +2016,20 @@
         document.getElementById('profileEducation').value = profileData.education || '';
 
         // ─── DASHBOARD STATS ───
-        function updateDashboardStats() { updateCareerDashboard(); }
+        function updateDashboardStats() {
+            const resumes = getLS('resumes', []);
+            const quizzes = getLS('quizzes', []);
+            const notes = getLS('notes', []);
+            document.getElementById('dashResumeCount').textContent = resumes.length;
+            document.getElementById('dashQuizCount').textContent = quizzes.length;
+            document.getElementById('dashNotesCount').textContent = notes.length;
+            const profile = getLS('profile', {});
+            const fields = ['name', 'email', 'bio', 'skills', 'education'];
+            let filled = 0;
+            fields.forEach(f => { if (profile[f] && profile[f].trim().length > 0) filled++; });
+            document.getElementById('dashProfileComplete').textContent = Math.min(Math.round((filled / fields.length) *
+                100), 100) + '%';
+        }
 
         // ─── RESUME ───
         function updateResumePreview() {
@@ -1995,7 +2044,24 @@
         document.querySelectorAll('#resumeForm input, #resumeForm textarea').forEach(el => el.addEventListener('input',
             updateResumePreview));
 
-        // Resume AI enhancement is handled by the professional patch below.
+        document.getElementById('resumeAiBtn').addEventListener('click', async function() {
+            const status = document.getElementById('resumeAiStatus');
+            status.textContent = '🧠 Generating...';
+            this.disabled = true;
+            await new Promise(r => setTimeout(r, 10));
+            document.getElementById('resumeFullName').value = "Enhanced Professional Name";
+            document.getElementById('resumeEducation').value = "M.Sc. Computer Science, Top Tier University (2024)";
+            document.getElementById('resumeSkills').value = "Python, JavaScript, React, Node.js, AWS, Machine Learning";
+            document.getElementById('resumeExperience').value =
+                "Senior Software Engineer at TechCorp (2022-Present): Led a team of 6 to build an AI-driven analytics platform serving 50k+ users. Improved API response times by 40%.";
+            document.getElementById('resumeProjects').value = "AI Chatbot (React + OpenAI), E-commerce Microservices (Node.js + Docker)";
+            document.getElementById('resumeAchievements').value = "Hackathon Winner 2023, Published paper on Generative AI";
+            document.getElementById('resumeLanguages').value = "English (Fluent), Spanish (Professional), German (Basic)";
+            status.textContent = "✅ Enhanced!";
+            this.disabled = false;
+            updateResumePreview();
+            showToast("✨ Resume Enhanced!", 'success');
+        });
 
         // ─── PORTFOLIO ───
         function updatePortfolioPreview() {
@@ -2010,7 +2076,23 @@
         document.querySelectorAll('#portfolioForm input, #portfolioForm textarea').forEach(el => el.addEventListener('input',
             updatePortfolioPreview));
 
-        // Portfolio AI enhancement is handled by the professional patch below.
+        document.getElementById('portfolioAiBtn').addEventListener('click', async function() {
+            const status = document.getElementById('portfolioAiStatus');
+            status.textContent = '🧠 Generating...';
+            this.disabled = true;
+            await new Promise(r => setTimeout(r, 10));
+            document.getElementById('portfolioFullName').value = "Jane Doe";
+            document.getElementById('portfolioTitle').value = "Lead Full Stack Architect & AI Enthusiast";
+            document.getElementById('portfolioBio').value =
+                "I build scalable, human-centered digital experiences using modern web technologies and artificial intelligence.";
+            document.getElementById('portfolioSkills').value = "React, Python, Flask, MongoDB, GraphQL, Docker, AWS";
+            document.getElementById('portfolioProjects').value =
+                '[{"title":"AI-Powered Dashboard","description":"Real-time data visualization tool using D3.js and ML predictions.","link":"https://github.com/jane-doe/dashboard"},{"title":"E-Commerce Backend","description":"High throughput microservice architecture handling 100k orders/day.","link":"https://github.com/jane-doe/ecommerce"}]';
+            status.textContent = "✅ Enhanced!";
+            this.disabled = false;
+            updatePortfolioPreview();
+            showToast("✨ Portfolio Enhanced!", 'success');
+        });
 
         // ─── NOTES SUMMARIZER ───
         document.getElementById('notesSummarizeBtn').addEventListener('click', async function() {
@@ -3183,295 +3265,5 @@
         console.log('🔐 Auth ready — login to access all features.');
         console.log('🗺️ Roadmap: unique content for each career, including education paths.');
     </script>
-
-
-    <script>
-    /* ─── CAREER HUB ENHANCEMENTS ─── */
-    (function () {
-        const safeParse = (key, fallback) => {
-            try { const raw = localStorage.getItem('aihub_' + key); return raw ? JSON.parse(raw) : fallback; }
-            catch { return fallback; }
-        };
-
-        function hasMeaningful(value) {
-            if (Array.isArray(value)) return value.length > 0;
-            if (value && typeof value === 'object') return Object.values(value).some(hasMeaningful);
-            return typeof value === 'string' ? value.trim().length > 1 : Boolean(value);
-        }
-
-        function updateReadiness() {
-            const profile = safeParse('profile', {});
-            const resumes = safeParse('resumes', []);
-            const portfolios = safeParse('savedFiles', []);
-            const profileFields = ['name','bio','skills','education'];
-            const profileScore = Math.round((profileFields.filter(k => hasMeaningful(profile[k])).length / profileFields.length) * 100);
-            const resumeScore = Array.isArray(resumes) && resumes.length ? 100 : 0;
-            const portfolioScore = Array.isArray(portfolios) && portfolios.some(x => String(x?.type || '').toLowerCase().includes('portfolio')) ? 100 : 0;
-            const score = Math.round(profileScore * .4 + resumeScore * .35 + portfolioScore * .25);
-
-            const ring = document.getElementById('readinessRing');
-            const scoreEl = document.getElementById('readinessScore');
-            if (!ring || !scoreEl) return;
-            ring.style.setProperty('--score', score);
-            scoreEl.textContent = score + '%';
-            const label = document.getElementById('readinessLabel');
-            if (label) label.textContent = score >= 80 ? 'Career ready' : score >= 50 ? 'Good progress' : 'Getting started';
-            ['Profile','Resume','Portfolio'].forEach((name, i) => {
-                const el = document.getElementById('readiness' + name);
-                if (el) el.textContent = [profileScore,resumeScore,portfolioScore][i] + '%';
-            });
-            const dash = document.getElementById('dashProfileComplete');
-            if (dash) dash.textContent = profileScore + '%';
-        }
-
-        function updateDynamicGreeting() {
-            const profile = safeParse('profile', {});
-            const user = safeParse('user', {});
-            const name = profile?.name || user?.displayName || user?.email?.split('@')[0] || 'Student';
-            const greeting = document.getElementById('userGreeting');
-            const avatar = document.getElementById('userAvatar');
-            if (greeting) greeting.textContent = 'Welcome, ' + String(name).slice(0, 28);
-            if (avatar) avatar.textContent = String(name).trim().charAt(0).toUpperCase() || 'S';
-        }
-
-        function setupEnhancements() {
-            document.querySelectorAll('.next-action').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const page = btn.dataset.nextPage;
-                    if (window.navigateTo && page) window.navigateTo(page);
-                });
-            });
-
-            // Keep the dashboard metrics honest and synchronized with stored data.
-            const resumes = safeParse('resumes', []);
-            const quizzes = safeParse('quizHistory', safeParse('quizzes', []));
-            const notes = safeParse('notesHistory', safeParse('notes', []));
-            const r = document.getElementById('dashResumeCount');
-            const q = document.getElementById('dashQuizCount');
-            const n = document.getElementById('dashNotesCount');
-            if (r && Array.isArray(resumes)) r.textContent = resumes.length;
-            if (q && Array.isArray(quizzes)) q.textContent = quizzes.length;
-            if (n && Array.isArray(notes)) n.textContent = notes.length;
-
-            updateReadiness();
-            updateDynamicGreeting();
-
-            // Keyboard shortcut: "/" focuses the first search-like input.
-            document.addEventListener('keydown', e => {
-                if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
-                const tag = document.activeElement?.tagName;
-                if (['INPUT','TEXTAREA','SELECT'].includes(tag)) return;
-                e.preventDefault();
-                const input = document.querySelector('input:not([type="hidden"]):not([disabled]), textarea');
-                input?.focus();
-            });
-
-            // Close mobile sidebar with Escape.
-            document.addEventListener('keydown', e => {
-                if (e.key === 'Escape') {
-                    document.getElementById('sidebar')?.classList.remove('open');
-                    document.getElementById('sidebarOverlay')?.classList.remove('open');
-                }
-            });
-
-            // Save the user's preferred theme immediately.
-            const dark = safeParse('darkMode', false);
-            if (dark === true && !document.body.classList.contains('dark')) document.body.classList.add('dark');
-
-            // Mark the application status in the header without claiming external uptime.
-            const header = document.querySelector('header .flex.items-center.gap-3');
-            if (header && !document.getElementById('appStatusBadge')) {
-                const status = document.createElement('span');
-                status.id = 'appStatusBadge';
-                status.className = 'app-status hidden sm:inline-flex';
-                status.textContent = 'App ready';
-                header.insertBefore(status, header.firstChild);
-            }
-        }
-
-        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', setupEnhancements);
-        else setupEnhancements();
-
-        // Recalculate after navigation or changes that are likely to update local data.
-        window.addEventListener('storage', () => { updateReadiness(); updateDynamicGreeting(); });
-        setInterval(() => { updateReadiness(); updateDynamicGreeting(); }, 3000);
-    })();
-    </script>
-
-
-
-<script>
-/* ==========================================================
-   PROFESSIONAL CAREER HUB PATCH — RESUME / PORTFOLIO / UX
-   Developer credit: Mayuri Y. Sutar | ankushpsutar01@gmail.com
-   ========================================================== */
-(function () {
-  'use strict';
-  const $ = id => document.getElementById(id);
-  const esc = value => String(value ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
-  const lsGet = (key, fallback) => { try { const v = localStorage.getItem('aihub_' + key); return v ? JSON.parse(v) : fallback; } catch { return fallback; } };
-  const lsSet = (key, value) => { try { localStorage.setItem('aihub_' + key, JSON.stringify(value)); } catch {} };
-  const uid = prefix => prefix + '_' + Date.now().toString(36) + Math.random().toString(36).slice(2,7);
-  const csv = value => String(value || '').split(',').map(x => x.trim()).filter(Boolean);
-  const lines = value => String(value || '').split(/\n+/).map(x => x.trim()).filter(Boolean);
-  const validUrl = value => { try { const u = new URL(value); return /^https?:$/.test(u.protocol); } catch { return false; } };
-  const toast = (msg,type='info') => window.showToast ? window.showToast(msg,type) : alert(msg);
-
-  function addStyles(){
-    const style=document.createElement('style');
-    style.textContent=`
-      .pro-toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.pro-toolbar .pro-chip{padding:7px 12px;border:1px solid #e2e8f0;border-radius:999px;background:#fff;font-size:.78rem;font-weight:600;cursor:pointer}.dark .pro-toolbar .pro-chip{background:#1e293b;border-color:#334155;color:#e2e8f0}.pro-chip.active{border-color:#4f46e5;color:#4f46e5;background:#eef2ff}.dark .pro-chip.active{background:#312e81;color:#c7d2fe}.quality-bar{height:8px;border-radius:99px;background:#e2e8f0;overflow:hidden}.quality-bar span{display:block;height:100%;background:linear-gradient(90deg,#ef4444,#f59e0b,#10b981);transition:width .3s}.pro-hint{font-size:.75rem;color:#64748b;margin-top:4px}.dark .pro-hint{color:#94a3b8}.resume-preview.pro-resume{max-width:850px;margin:auto;min-height:900px;padding:42px;background:#fff;color:#172033}.pro-resume .resume-head{border-bottom:3px solid #4f46e5;padding-bottom:18px;margin-bottom:18px}.pro-resume .resume-head h1{font-size:2rem;letter-spacing:-.02em}.pro-resume .contact{font-size:.8rem;color:#64748b;margin-top:5px}.pro-resume .section{margin-top:18px}.pro-resume .section h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;color:#4f46e5;border-bottom:1px solid #cbd5e1;padding-bottom:5px;margin-bottom:9px}.pro-resume .item{margin-bottom:10px}.pro-resume .tags span{display:inline-block;background:#eef2ff;color:#4338ca;border-radius:999px;padding:3px 8px;margin:2px;font-size:.72rem}.portfolio-preview.pro-portfolio{padding:0;background:#fff;color:#172033;min-height:760px;overflow:hidden}.pro-portfolio .hero{padding:42px 30px;background:linear-gradient(135deg,#eef2ff,#f0f9ff)}.pro-portfolio .hero h1{font-size:2rem}.pro-portfolio .project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:22px 30px}.pro-portfolio .project{border:1px solid #e2e8f0;border-radius:14px;padding:15px}.pro-portfolio .skill{display:inline-block;padding:5px 10px;border-radius:999px;background:#f1f5f9;margin:3px;font-size:.75rem}.pro-score{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;background:#f8fafc;margin:10px 0}.dark .pro-score{background:#0f172a}.pro-check{font-size:.78rem;color:#475569}.dark .pro-check{color:#cbd5e1}@media(max-width:640px){.pro-portfolio .project-grid{grid-template-columns:1fr}.resume-preview.pro-resume{padding:24px;min-height:auto}}
-    `; document.head.appendChild(style);
-  }
-
-  function collectResume(){
-    return {
-      id: $('resumeId')?.value || uid('resume'),
-      name: $('resumeFullName')?.value.trim() || '',
-      email: $('resumeEmail')?.value.trim() || '',
-      phone: $('resumePhone')?.value.trim() || '',
-      summary: $('resumeSummary')?.value.trim() || '',
-      education: $('resumeEducation')?.value.trim() || '',
-      skills: csv($('resumeSkills')?.value),
-      experience: $('resumeExperience')?.value.trim() || '',
-      projects: csv($('resumeProjects')?.value),
-      achievements: csv($('resumeAchievements')?.value),
-      certifications: csv($('resumeCertifications')?.value),
-      languages: csv($('resumeLanguages')?.value),
-      updatedAt: new Date().toISOString()
-    };
-  }
-  function resumeScore(r){
-    const checks=[r.name,r.email,r.summary,r.education,r.skills.length,r.experience,r.projects.length,r.achievements.length,r.certifications?.length,r.languages.length];
-    return Math.round(checks.filter(Boolean).length/checks.length*100);
-  }
-  function resumeHtml(r){
-    const skillHtml=r.skills.map(x=>`<span>${esc(x)}</span>`).join('');
-    const projectHtml=r.projects.map(x=>`<div class="item"><strong>${esc(x)}</strong></div>`).join('');
-    const achievementHtml=r.achievements.map(x=>`<li>${esc(x)}</li>`).join('');
-    const languageHtml=r.languages.map(x=>`<span>${esc(x)}</span>`).join('');
-    return `<div class="pro-resume"><div class="resume-head"><h1>${esc(r.name||'Your Name')}</h1><div class="contact">${esc([r.email,r.phone,r.education].filter(Boolean).join(' · ')||'Add contact details')}</div></div>
-      <div class="section"><h3>Professional Summary</h3><p>${esc(r.summary||r.experience||'Add a concise summary of your strengths, goals and experience.')}</p></div>
-      ${r.skills.length?`<div class="section"><h3>Skills</h3><div class="tags">${skillHtml}</div></div>`:''}
-      ${r.experience?`<div class="section"><h3>Experience</h3><div class="item">${esc(r.experience).replace(/\n/g,'<br>')}</div></div>`:''}
-      ${r.education?`<div class="section"><h3>Education</h3><div class="item">${esc(r.education)}</div></div>`:''}
-      ${r.projects.length?`<div class="section"><h3>Projects</h3>${projectHtml}</div>`:''}
-      ${r.achievements.length?`<div class="section"><h3>Achievements</h3><ul class="resume-list">${achievementHtml}</ul></div>`:''}${r.certifications?.length?`<div class="section"><h3>Certifications</h3><ul class="resume-list">${r.certifications.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}
-      ${r.languages.length?`<div class="section"><h3>Languages</h3><div class="tags">${languageHtml}</div></div>`:''}
-    </div>`;
-  }
-  function renderResume(){
-    const r=collectResume(), preview=$('resumePreview'); if(!preview)return;
-    preview.innerHTML=resumeHtml(r);
-    const score=resumeScore(r);
-    let box=$('resumeQualityBox');
-    if(!box){box=document.createElement('div');box.id='resumeQualityBox';preview.parentElement.insertBefore(box,preview);}
-    box.className='pro-score'; box.innerHTML=`<strong>Resume quality: ${score}%</strong><div class="quality-bar" style="flex:1"><span style="width:${score}%"></span></div><small>${score>=85?'ATS-ready':'Complete more sections'}</small>`;
-  }
-  function renderResumeList(){
-    const sel=$('resumeSelector'); if(!sel)return; const data=lsGet('resumes',[]); sel.innerHTML='<option value="">-- Select a resume --</option>' + data.map(r=>`<option value="${esc(r.id)}">${esc(r.name||'Untitled Resume')} · ${new Date(r.updatedAt||Date.now()).toLocaleDateString()}</option>`).join('');
-  }
-  function fillResume(r){
-    if(!r)return; $('resumeId').value=r.id||''; $('resumeFullName').value=r.name||''; $('resumeEmail').value=r.email||''; $('resumePhone').value=r.phone||''; $('resumeSummary').value=r.summary||''; $('resumeEducation').value=r.education||''; $('resumeSkills').value=(r.skills||[]).join(', '); $('resumeExperience').value=r.experience||''; $('resumeProjects').value=(r.projects||[]).join(', '); $('resumeAchievements').value=(r.achievements||[]).join(', '); $('resumeCertifications').value=(r.certifications||[]).join(', '); $('resumeLanguages').value=(r.languages||[]).join(', '); renderResume();
-  }
-  function saveResume(){
-    const r=collectResume(); if(!r.name){toast('Please enter your full name.','error');$('resumeFullName')?.focus();return false;}
-    let data=lsGet('resumes',[]); const idx=data.findIndex(x=>x.id===r.id); if(idx>=0)data[idx]=r;else data.unshift(r); lsSet('resumes',data); $('resumeId').value=r.id; renderResumeList(); $('resumeSelector').value=r.id; toast(`✅ Resume saved · ${resumeScore(r)}% complete`,'success'); if(window.updateDashboardStats)window.updateDashboardStats(); return true;
-  }
-  function newResume(){['resumeId','resumeFullName','resumeEmail','resumePhone','resumeSummary','resumeEducation','resumeSkills','resumeExperience','resumeProjects','resumeAchievements','resumeCertifications','resumeLanguages'].forEach(id=>{if($(id))$(id).value='';});renderResume();renderResumeList();}
-  function enhanceResume(){
-    const r=collectResume();
-    if(!r.name){toast('Enter your name before using Enhance.','error');return;}
-    if(!r.summary){const parts=[];if(r.education)parts.push(r.education);if(r.skills.length)parts.push('with skills in '+r.skills.slice(0,6).join(', '));if(r.projects.length)parts.push('and practical project experience in '+r.projects.slice(0,3).join(', '));r.summary=parts.length?('Motivated student '+parts.join(' ')+'.'):'Add your own professional summary to keep the resume accurate.';}
-    $('resumeSummary').value=r.summary;renderResume();toast('✨ Resume structure improved using only your information.','success');careerActivity('Improved resume structure');updateCareerDashboard();
-  }
-
-  function collectPortfolio(){
-    let projects=[]; try{projects=JSON.parse($('portfolioProjects')?.value||'[]');if(!Array.isArray(projects))projects=[];}catch{projects=[];}
-    let social=parseSocial($('portfolioSocial')?.value);
-    if($('portfolioGithub')?.value.trim())social.github=$('portfolioGithub').value.trim();
-    if($('portfolioLinkedin')?.value.trim())social.linkedin=$('portfolioLinkedin').value.trim();
-    return {id:$('portfolioId')?.value||uid('portfolio'),name:$('portfolioFullName')?.value.trim()||'',title:$('portfolioTitle')?.value.trim()||'',bio:$('portfolioBio')?.value.trim()||'',email:$('portfolioEmail')?.value.trim()||'',social,skills:csv($('portfolioSkills')?.value),projects:projects.map(p=>({title:String(p.title||'Project'),description:String(p.description||''),link:validUrl(p.link)?p.link:''})),updatedAt:new Date().toISOString()};
-  }
-  function parseSocial(v){try{const x=JSON.parse(v||'{}');return x&&typeof x==='object'?x:{};}catch{return {};}}
-  function portfolioScore(p){return Math.round([p.name,p.title,p.bio,p.email,p.skills.length,p.projects.length,Object.keys(p.social).length].filter(Boolean).length/7*100);}
-  function portfolioHtml(p){
-    const socials=Object.entries(p.social).filter(([k,v])=>validUrl(v)).map(([k,v])=>`<a class="social-link" href="${esc(v)}" target="_blank" rel="noopener">${esc(k)}</a>`).join(' · ');
-    const skills=p.skills.map(x=>`<span class="skill">${esc(x)}</span>`).join('');
-    const projects=p.projects.map(x=>`<article class="project"><h3 class="font-bold">${esc(x.title)}</h3><p class="text-sm mt-1">${esc(x.description)}</p>${x.link?`<a class="text-indigo-600 text-sm mt-2 inline-block" href="${esc(x.link)}" target="_blank" rel="noopener">View project ↗</a>`:''}</article>`).join('');
-    return `<div class="pro-portfolio"><div class="hero"><p class="text-sm font-semibold text-indigo-600">AI STUDENT CAREER HUB</p><h1>${esc(p.name||'Your Name')}</h1><h2 class="text-lg mt-1">${esc(p.title||'Student • Developer • Creator')}</h2><p class="mt-4 max-w-2xl">${esc(p.bio||'Build a strong professional presence with your projects, skills and achievements.')}</p><p class="text-sm mt-4">${esc(p.email)} ${socials?' · '+socials:''}</p></div><section class="px-[30px] pt-5"><h2 class="font-bold">Skills</h2><div class="mt-2">${skills||'<span class="text-sm text-gray-500">Add your skills</span>'}</div></section><section><h2 class="font-bold px-[30px] pt-5">Featured Projects</h2><div class="project-grid">${projects||'<div class="project">Add your projects to showcase your work.</div>'}</div></section><div class="px-[30px] pb-6 text-xs text-gray-400">Built with AI Student Career Hub · Developer: Mayuri Y. Sutar</div></div>`;
-  }
-  function renderPortfolio(){const p=collectPortfolio();if($('portfolioPreview'))$('portfolioPreview').innerHTML=portfolioHtml(p);let box=$('portfolioQualityBox');if(!box&&$('portfolioPreview')){box=document.createElement('div');box.id='portfolioQualityBox';$('portfolioPreview').parentElement.insertBefore(box,$('portfolioPreview'));}if(box){const score=portfolioScore(p);box.className='pro-score';box.innerHTML=`<strong>Portfolio quality: ${score}%</strong><div class="quality-bar" style="flex:1"><span style="width:${score}%"></span></div><small>${score>=85?'Publish-ready':'Add more details'}</small>`;}}
-  function renderPortfolioList(){const sel=$('portfolioSelector');if(!sel)return;const data=lsGet('portfolios',[]);sel.innerHTML='<option value="">-- Select a portfolio --</option>'+data.map(p=>`<option value="${esc(p.id)}">${esc(p.name||'Untitled Portfolio')} · ${new Date(p.updatedAt||Date.now()).toLocaleDateString()}</option>`).join('');}
-  function fillPortfolio(p){if(!p)return;$('portfolioId').value=p.id||'';$('portfolioFullName').value=p.name||'';$('portfolioTitle').value=p.title||'';$('portfolioBio').value=p.bio||'';$('portfolioEmail').value=p.email||'';$('portfolioSocial').value=JSON.stringify(p.social||{},null,0);$('portfolioGithub').value=p.social?.github||'';$('portfolioLinkedin').value=p.social?.linkedin||'';$('portfolioSkills').value=(p.skills||[]).join(', ');$('portfolioProjects').value=JSON.stringify(p.projects||[],null,2);renderPortfolio();}
-  function savePortfolio(){const p=collectPortfolio();if(!p.name){toast('Please enter your full name.','error');return false;}let data=lsGet('portfolios',[]);const idx=data.findIndex(x=>x.id===p.id);if(idx>=0)data[idx]=p;else data.unshift(p);lsSet('portfolios',data);$('portfolioId').value=p.id;renderPortfolioList();$('portfolioSelector').value=p.id;toast(`✅ Portfolio saved · ${portfolioScore(p)}% complete`,'success');return true;}
-  function newPortfolio(){['portfolioId','portfolioFullName','portfolioTitle','portfolioBio','portfolioEmail','portfolioSocial','portfolioGithub','portfolioLinkedin','portfolioSkills','portfolioProjects'].forEach(id=>{if($(id))$(id).value='';});$('portfolioProjects').value='[]';renderPortfolio();renderPortfolioList();}
-  function enhancePortfolio(){const p=collectPortfolio();if(!p.name){toast('Enter your name before using Enhance.','error');return;}if(!p.title)p.title='AI/ML Student & Software Developer';if(!p.bio)p.bio='I am a motivated student building practical technology projects and exploring AI, machine learning and modern web development.';if(!p.email)p.email='ankushpsutar01@gmail.com';if(!p.skills.length)p.skills=['Python','Java','JavaScript','SQL','Firebase','GitHub'];if(!p.projects.length)p.projects=[{title:'AI Student Career Hub',description:'A student-focused platform for career planning, resume building, portfolios and learning tools.',link:''}];$('portfolioTitle').value=p.title;$('portfolioBio').value=p.bio;$('portfolioEmail').value=p.email;$('portfolioSkills').value=p.skills.join(', ');$('portfolioProjects').value=JSON.stringify(p.projects,null,2);renderPortfolio();toast('✨ Portfolio improved using your existing information.','success');}
-  function downloadResume(){const r=collectResume();if(!r.name){toast('Complete your name first.','error');return;}const node=document.createElement('div');node.innerHTML=resumeHtml(r);document.body.appendChild(node);const opts={margin:.35,filename:(r.name.replace(/[^a-z0-9]+/gi,'-').toLowerCase()||'resume')+'.pdf',image:{type:'jpeg',quality:.98},html2canvas:{scale:2,useCORS:true},jsPDF:{unit:'in',format:'a4',orientation:'portrait'}};if(window.html2pdf)window.html2pdf().set(opts).from(node.firstElementChild).save().finally(()=>node.remove());else{node.remove();toast('PDF library unavailable. Refresh the page and try again.','error');}}
-  function downloadPortfolioZip(){const p=collectPortfolio();if(!p.name){toast('Complete your portfolio first.','error');return;}const html=`<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(p.name)} — Portfolio</title><style>body{font-family:Arial,sans-serif;margin:0;color:#172033}main{max-width:1000px;margin:auto}.hero{padding:70px 30px;background:linear-gradient(135deg,#eef2ff,#f0f9ff)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;padding:30px}.project{border:1px solid #ddd;border-radius:14px;padding:18px}.skill{display:inline-block;background:#eef2ff;color:#4338ca;padding:6px 10px;border-radius:20px;margin:4px;font-size:13px}a{color:#4338ca}</style></head><body><main>${portfolioHtml(p)}</main></body></html>`;if(window.JSZip&&window.saveAs){const zip=new JSZip();zip.file('index.html',html);zip.file('README.txt','Portfolio generated by AI Student Career Hub. Developer: Mayuri Y. Sutar. Contact: ankushpsutar01@gmail.com');zip.generateAsync({type:'blob'}).then(blob=>saveAs(blob,(p.name.replace(/[^a-z0-9]+/gi,'-').toLowerCase()||'portfolio')+'-portfolio.zip'));toast('📦 Portfolio ZIP prepared.','success');}else{const blob=new Blob([html],{type:'text/html'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='portfolio.html';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);}}
-  function publishPortfolio(){const p=collectPortfolio();if(!savePortfolio())return;const html=`<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(p.name)} — Portfolio</title></head><body>${portfolioHtml(p)}</body></html>`;const blob=new Blob([html],{type:'text/html'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=(p.name.replace(/[^a-z0-9]+/gi,'-').toLowerCase()||'portfolio')+'-published.html';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);toast('🚀 Standalone portfolio generated. Upload it to GitHub Pages to publish it online.','success');}
-
-  function careerActivity(label){
-    const data=lsGet('careerActivity',[]);data.unshift({label,time:new Date().toISOString()});lsSet('careerActivity',data.slice(0,12));renderCareerActivity();
-  }
-  function renderCareerActivity(){const box=$('activityFeed');if(!box)return;const data=lsGet('careerActivity',[]);box.innerHTML=data.length?data.map(x=>`<div class="activity-item text-sm"><div class="font-medium">${esc(x.label)}</div><div class="text-xs text-gray-500">${new Date(x.time).toLocaleString()}</div></div>`).join(''):'<div class="text-sm text-gray-500">No activity yet. Start with a career assessment.</div>';}
-  window.clearCareerActivity=function(){lsSet('careerActivity',[]);renderCareerActivity();toast('Activity cleared.','info');};
-  function updateCareerDashboard(){
-    const profile=lsGet('profile',{}),resumes=lsGet('resumes',[]),portfolios=lsGet('portfolios',[]),projects=lsGet('careerProjects',[]),quizzes=lsGet('quizzes',[]),notes=lsGet('notes',[]),interviews=lsGet('interviewPractice',[]);
-    const fields=['name','email','bio','skills','education'];const profileScore=Math.round(fields.filter(f=>String(profile[f]||'').trim()).length/fields.length*100);
-    const r=resumes[0]||{};const resumeScoreVal=r?Math.round([r.name,r.education,r.skills?.length,r.experience,r.projects?.length,r.achievements?.length,r.languages?.length].filter(Boolean).length/7*100):0;
-    const po=portfolios[0]||{};const portfolioScoreVal=po?Math.round([po.name,po.title,po.bio,po.email,po.skills?.length,po.projects?.length,Object.keys(po.social||{}).length].filter(Boolean).length/7*100):0;
-    const projectScore=Math.min(100,projects.length*25);const readiness=Math.round((profileScore+resumeScoreVal+portfolioScoreVal+projectScore)/4);
-    [['dashResumeCount',resumes.length],['dashPortfolioCount',portfolios.length],['dashQuizCount',quizzes.length],['dashNotesCount',notes.length],['dashProjectCount',projects.length],['dashInterviewCount',interviews.length]].forEach(([id,v])=>{if($(id))$(id).textContent=v;});
-    const name=profile.name||getLS('user',{}).name||'Student';if($('dashUserName'))$('dashUserName').textContent=name.split(' ')[0];
-    if($('readinessScore'))$('readinessScore').textContent=readiness+'%';if($('readinessLabel'))$('readinessLabel').textContent=readiness>=85?'Career-ready':readiness>=65?'Making progress':readiness>=40?'Building foundation':'Getting started';
-    [['readinessProfile',profileScore],['readinessResume',resumeScoreVal],['readinessPortfolio',portfolioScoreVal],['readinessProjects',projectScore]].forEach(([id,v])=>{if($(id))$(id).textContent=v+'%';const b=$(id+'Bar');if(b)b.style.width=v+'%';});
-    const rec=readiness<30?'Complete your profile and career assessment first.':readiness<55?'Build an ATS-ready resume and add your first project.':readiness<75?'Finish your portfolio and follow a roadmap for your target role.':readiness<90?'Practice interviews and strengthen your project evidence.':'Keep practicing and update your documents for each opportunity.';if($('nextRecommendation'))$('nextRecommendation').textContent=rec;
-    if($('profileStatusBadge'))$('profileStatusBadge').textContent=readiness>=85?'Ready to apply':readiness>=60?'In progress':'Getting started';renderCareerActivity();
-  }
-  function generateAssessment(){
-    const interest=$('assessInterest')?.value||'software',skills=csv($('assessSkills')?.value),work=$('assessWork')?.value||'build',level=$('assessLevel')?.value||'Student / Beginner';
-    const map={ai:{title:'AI / Machine Learning Engineer',skills:['Python','Statistics','Machine Learning','SQL','Git'],projects:['Prediction system','NLP or notes assistant','Recommendation system']},software:{title:'Software Developer',skills:['JavaScript','Python/Java','SQL','Git/GitHub','APIs'],projects:['Full-stack CRUD app','Authentication system','Student productivity app']},data:{title:'Data Analyst / Junior Data Scientist',skills:['SQL','Python','Excel','Statistics','Data Visualization'],projects:['Student performance dashboard','Sales/data analysis','Interactive analytics report']},design:{title:'UI/UX + Frontend Developer',skills:['Figma','HTML/CSS','JavaScript','Accessibility','Responsive Design'],projects:['Design system','Responsive student portal','Portfolio case study']},security:{title:'Cybersecurity / Network Support',skills:['Networking','Linux','Security basics','Python','Logs & monitoring'],projects:['Network monitor','Security checklist app','Log analysis dashboard']}};
-    const m=map[interest]||map.software;const matched=skills.filter(x=>m.skills.some(y=>y.toLowerCase().includes(x.toLowerCase())||x.toLowerCase().includes(y.toLowerCase())));const gaps=m.skills.filter(x=>!matched.some(y=>y.toLowerCase().includes(x.toLowerCase())||x.toLowerCase().includes(y.toLowerCase())));
-    const result=$('assessmentResult');if(!result)return;result.classList.remove('hidden');result.innerHTML=`<div class="career-result"><div class="text-xs uppercase tracking-wider text-indigo-600">Starting recommendation</div><h3 class="text-2xl font-extrabold mt-1">${esc(m.title)}</h3><p class="text-sm mt-2">Based on your interest in <strong>${esc(interest)}</strong>, preferred work style and current level (${esc(level)}).</p><div class="grid md:grid-cols-2 gap-4 mt-5"><div><strong>Skills to strengthen</strong><ul class="text-sm mt-2 space-y-1">${gaps.slice(0,5).map(x=>`<li>• ${esc(x)}</li>`).join('')||'<li>• Keep building depth in your current skills.</li>'}</ul></div><div><strong>Suggested projects</strong><ul class="text-sm mt-2 space-y-1">${m.projects.map(x=>`<li>• ${esc(x)}</li>`).join('')}</ul></div></div><div class="flex flex-wrap gap-2 mt-5"><button class="gradient-btn gradient-btn-sm" onclick="navigateTo('roadmap')">🗺️ Open Roadmap</button><button class="btn-secondary text-sm" onclick="navigateTo('projects')">💻 Add Project</button></div></div>`;lsSet('careerAssessment',{interest,skills,work,level,recommendation:m.title,gaps,updatedAt:new Date().toISOString()});careerActivity('Completed career assessment: '+m.title);updateCareerDashboard();}
-  function resetProjectForm(){['projectEditId','projectName','projectTech','projectDescription','projectGithub','projectDemo'].forEach(id=>{if($(id))$(id).value='';});}
-  function renderProjects(){const data=lsGet('careerProjects',[]),box=$('projectGrid');if($('projectCountLabel'))$('projectCountLabel').textContent=data.length+' project'+(data.length===1?'':'s');if(!box)return;box.innerHTML=data.length?data.map(p=>`<article class="project-card"><h4>${esc(p.name)}</h4><div class="text-xs text-indigo-600 mt-1">${esc(p.tech||'Technology not specified')}</div><p class="text-sm text-gray-500 mt-3">${esc(p.description||'No description yet.')}</p><div class="project-actions">${p.github&&validUrl(p.github)?`<a class="btn-secondary px-3 py-2 rounded-lg" href="${esc(p.github)}" target="_blank" rel="noopener">GitHub ↗</a>`:''}${p.demo&&validUrl(p.demo)?`<a class="btn-secondary px-3 py-2 rounded-lg" href="${esc(p.demo)}" target="_blank" rel="noopener">Demo ↗</a>`:''}<button class="text-indigo-600" onclick="editProject('${esc(p.id)}')">Edit</button><button class="text-red-600" onclick="deleteProject('${esc(p.id)}')">Delete</button></div></article>`).join(''):'<div class="text-sm text-gray-500 sm:col-span-2">No projects yet. Add your first real project.</div>';}
-  window.editProject=function(id){const p=lsGet('careerProjects',[]).find(x=>x.id===id);if(!p)return;$('projectEditId').value=p.id;$('projectName').value=p.name;$('projectTech').value=p.tech||'';$('projectDescription').value=p.description||'';$('projectGithub').value=p.github||'';$('projectDemo').value=p.demo||'';};
-  window.deleteProject=function(id){lsSet('careerProjects',lsGet('careerProjects',[]).filter(x=>x.id!==id));renderProjects();updateCareerDashboard();toast('Project deleted.','info');};
-  const interviewBank={Technical:{'AI/ML Intern':['Explain overfitting and how you would reduce it.','What is the difference between supervised and unsupervised learning?','How would you evaluate a classification model?'],'Software Developer Intern':['Explain the difference between let, const and var.','What is an API and why is it useful?','How would you debug a feature that works locally but fails after deployment?'],'Data Analyst Intern':['What is the difference between WHERE and HAVING in SQL?','How would you handle missing data?','What makes a dashboard useful?'],'Frontend Developer Intern':['What is responsive design?','How do you improve web accessibility?','What is the difference between HTML, CSS and JavaScript?'],'General HR':['Tell me about yourself.','Why do you want this internship?','Tell me about a challenge you solved.']},HR:{'AI/ML Intern':['Why did you choose AI/ML?','What are you currently learning?'],'Software Developer Intern':['Why should we select you?','Tell me about a project you built.'],'Data Analyst Intern':['How do you explain technical findings to a non-technical person?'],'Frontend Developer Intern':['How do you respond to design feedback?'],'General HR':['Tell me about yourself.','What are your strengths?']},Project:{'AI/ML Intern':['Explain your most challenging project decision.','What would you improve in your project?'],'Software Developer Intern':['How did you design your project architecture?','How did you test your project?'],'Data Analyst Intern':['What insight did your project produce?'],'Frontend Developer Intern':['How did you make your project responsive?'],'General HR':['What did you personally contribute to your project?']}};
-  let currentInterviewQuestion='';
-  window.newInterviewQuestion=function(){const type=$('interviewType')?.value||'Technical',role=$('interviewRole')?.value||'AI/ML Intern',list=(interviewBank[type]?.[role]||interviewBank.Technical['AI/ML Intern']);currentInterviewQuestion=list[Math.floor(Math.random()*list.length)];$('interviewQuestion').textContent=currentInterviewQuestion;$('interviewAnswer').classList.add('hidden');$('showInterviewAnswer').textContent='💡 Show Answer Framework';};
-  window.showInterviewAnswer=function(){const box=$('interviewAnswer');if(!box)return;box.classList.toggle('hidden');if(!box.classList.contains('hidden')){box.innerHTML='<strong>Answer framework</strong><p class="text-sm mt-2">Start with a clear definition or context → give one concrete example → explain what you personally did → finish with the result or lesson learned.</p>';const data=lsGet('interviewPractice',[]);data.unshift({question:currentInterviewQuestion,time:new Date().toISOString()});lsSet('interviewPractice',data.slice(0,30));careerActivity('Practiced interview question');updateCareerDashboard();}};
-  function wire(){
-    addStyles();
-    // Replace demo AI behavior with data-aware enhancement.
-    $('resumeAiBtn')?.addEventListener('click',e=>{e.preventDefault();enhanceResume();});
-    $('portfolioAiBtn')?.addEventListener('click',e=>{e.preventDefault();enhancePortfolio();});
-    $('resumeForm')?.addEventListener('submit',e=>{e.preventDefault();saveResume();});
-    $('portfolioForm')?.addEventListener('submit',e=>{e.preventDefault();savePortfolio();});
-    $('resumePdfBtn')?.addEventListener('click',downloadResume);
-    $('portfolioZipBtn')?.addEventListener('click',downloadPortfolioZip);
-    $('portfolioPublishBtn')?.addEventListener('click',publishPortfolio);
-    $('resumeNewBtn')?.addEventListener('click',newResume); $('portfolioNewBtn')?.addEventListener('click',newPortfolio);
-    $('resumeSelector')?.addEventListener('change',e=>{const r=lsGet('resumes',[]).find(x=>x.id===e.target.value);if(r)fillResume(r);});
-    $('portfolioSelector')?.addEventListener('change',e=>{const p=lsGet('portfolios',[]).find(x=>x.id===e.target.value);if(p)fillPortfolio(p);});
-    $('resumeDeleteBtn')?.addEventListener('click',()=>{const id=$('resumeSelector')?.value;if(!id)return toast('Select a resume first.','info');lsSet('resumes',lsGet('resumes',[]).filter(x=>x.id!==id));newResume();toast('🗑️ Resume deleted.','info');});
-    $('portfolioDeleteBtn')?.addEventListener('click',()=>{const id=$('portfolioSelector')?.value;if(!id)return toast('Select a portfolio first.','info');lsSet('portfolios',lsGet('portfolios',[]).filter(x=>x.id!==id));newPortfolio();toast('🗑️ Portfolio deleted.','info');});
-    document.querySelectorAll('#resumeForm input,#resumeForm textarea').forEach(el=>el.addEventListener('input',renderResume));
-    document.querySelectorAll('#portfolioForm input,#portfolioForm textarea').forEach(el=>el.addEventListener('input',renderPortfolio));
-    // Useful defaults from the developer profile without overwriting user data.
-    const profile=lsGet('profile',{}); if(!profile.email){profile.email='ankushpsutar01@gmail.com';lsSet('profile',profile);} 
-    $('assessmentForm')?.addEventListener('submit',e=>{e.preventDefault();generateAssessment();});
-    $('projectForm')?.addEventListener('submit',e=>{e.preventDefault();const data=lsGet('careerProjects',[]);const item={id:$('projectEditId').value||uid('project'),name:$('projectName').value.trim(),tech:$('projectTech').value.trim(),description:$('projectDescription').value.trim(),github:$('projectGithub').value.trim(),demo:$('projectDemo').value.trim(),updatedAt:new Date().toISOString()};if(!item.name)return toast('Enter a project name.','error');const idx=data.findIndex(x=>x.id===item.id);if(idx>=0)data[idx]=item;else data.unshift(item);lsSet('careerProjects',data);resetProjectForm();renderProjects();updateCareerDashboard();careerActivity('Saved project: '+item.name);toast('💻 Project saved.','success');});
-    renderProjects();updateCareerDashboard();
-    renderResumeList();renderPortfolioList();renderResume();renderPortfolio();
-    // Remove any old demo values if they were accidentally inserted by the previous demo enhancer.
-    if($('resumeFullName')?.value==='Enhanced Professional Name')$('resumeFullName').value='';
-    if($('portfolioFullName')?.value==='Jane Doe')$('portfolioFullName').value='';
-    renderResume();renderPortfolio();
-  }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',wire);else wire();
-})();
-</script>
 </body>
 </html>

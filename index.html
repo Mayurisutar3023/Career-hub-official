@@ -1015,6 +1015,38 @@
         .tab-btn.active { background: #4F46E5; color: #fff; }
         .tab-btn:not(.active):hover { background: #e2e8f0; }
         body.dark .tab-btn:not(.active):hover { background: #1E293B; }
+    
+        /* ─── CAREER HUB V2 ─── */
+        .career-command-card{background:linear-gradient(135deg,rgba(79,70,229,.07),rgba(56,189,248,.08));border-color:rgba(99,102,241,.16)}
+        .career-ai-messages{height:430px;overflow-y:auto;padding:16px;border:1px solid #e2e8f0;border-radius:16px;background:#f8fafc;display:flex;flex-direction:column;gap:12px}
+        body.dark .career-ai-messages{background:#0b1220;border-color:#334155}
+        .career-ai-bubble{max-width:86%;padding:12px 15px;border-radius:16px;line-height:1.6;font-size:.92rem;white-space:pre-wrap}
+        .career-ai-bubble.bot{align-self:flex-start;background:#fff;border:1px solid #e2e8f0;border-bottom-left-radius:4px}
+        .career-ai-bubble.user{align-self:flex-end;background:linear-gradient(135deg,#4F46E5,#38BDF8);color:#fff;border-bottom-right-radius:4px}
+        body.dark .career-ai-bubble.bot{background:#1e293b;border-color:#334155;color:#e2e8f0}
+        .career-ai-composer{display:flex;gap:8px;margin-top:12px}
+        .career-ai-composer input,.career-ai-composer textarea{flex:1;padding:12px 14px;border:2px solid #e2e8f0;border-radius:12px;outline:none;background:#fff;font-family:'Poppins',sans-serif;resize:vertical}
+        body.dark .career-ai-composer input,body.dark .career-ai-composer textarea{background:#0f172a;color:#e2e8f0;border-color:#334155}
+        .career-ai-composer input:focus,.career-ai-composer textarea:focus{border-color:#4f46e5}
+        .ai-chip{border:1px solid #e2e8f0;background:#fff;padding:7px 11px;border-radius:999px;font-size:.78rem;cursor:pointer;transition:.2s}
+        .ai-chip:hover{border-color:#6366f1;transform:translateY(-1px)}
+        body.dark .ai-chip{background:#1e293b;color:#e2e8f0;border-color:#334155}
+        .readiness-score{font-size:4.5rem;line-height:1;font-weight:800;background:linear-gradient(135deg,#4F46E5,#38BDF8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:18px 0 5px}
+        .readiness-ring{width:118px;height:118px;border-radius:50%;margin:18px auto;background:conic-gradient(#4F46E5 0deg,#38BDF8 0deg,#e2e8f0 0deg);display:grid;place-items:center;position:relative}
+        .readiness-ring:after{content:"";position:absolute;width:88px;height:88px;border-radius:50%;background:#fff}
+        body.dark .readiness-ring:after{background:#1e293b}
+        .readiness-ring div{position:relative;z-index:1;font-weight:700}
+        .readiness-bar{height:9px;border-radius:999px;background:#e2e8f0;overflow:hidden}
+        .readiness-bar span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#4F46E5,#38BDF8)}
+        .opportunity-card{position:relative;overflow:hidden}
+        .opportunity-card .match{font-size:.75rem;font-weight:700;color:#047857;background:#d1fae5;padding:4px 9px;border-radius:999px}
+        body.dark .opportunity-card .match{background:#064e3b;color:#a7f3d0}
+        .project-card-v2{transition:.2s}
+        .project-card-v2:hover{transform:translateY(-3px)}
+        .project-link{font-size:.8rem;color:#4f46e5;font-weight:600}
+        body.dark .project-link{color:#818cf8}
+        @media(max-width:640px){.career-ai-composer{flex-direction:column}.career-ai-composer button{width:100%}.readiness-score{font-size:3.6rem}}
+
     </style>
 </head>
 <body>
@@ -1034,6 +1066,12 @@
         <nav class="flex-1 space-y-1" id="mainNav">
             <a data-page="landing"><span class="icon">🏠</span> Home</a>
             <a data-page="dashboard" class="active"><span class="icon">📊</span> Dashboard</a>
+            <a data-page="careerai"><span class="icon">🤖</span> AI Career Coach</a>
+            <a data-page="readiness"><span class="icon">🎯</span> Career Readiness</a>
+            <a data-page="assessment"><span class="icon">🧪</span> Skill Assessment</a>
+            <a data-page="opportunities"><span class="icon">💼</span> Jobs & Internships</a>
+            <a data-page="interview"><span class="icon">🎤</span> Mock Interview</a>
+            <a data-page="projects"><span class="icon">🛠️</span> Project Hub</a>
             <a data-page="profile"><span class="icon">👤</span> Profile</a>
             <a data-page="resume"><span class="icon">📄</span> Resume Builder</a>
             <a data-page="portfolio"><span class="icon">🌐</span> Portfolio</a>
@@ -1074,7 +1112,7 @@
         <!-- ─── PAGES ─── -->
         <div id="page-landing" class="page">
             <section class="relative min-h-[80vh] flex items-center overflow-hidden"><div class="hero-bg"><div class="orb"></div><div class="orb"></div><div class="orb"></div></div><div class="relative z-10 max-w-7xl mx-auto px-4 py-12"><div class="grid lg:grid-cols-2 gap-16 items-center"><div class="space-y-8"><span class="inline-flex items-center gap-2 bg-[#4F46E5]/10 text-[#4F46E5] text-sm font-semibold px-4 py-2 rounded-full">✨ AI-Powered Career Platform</span><h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1]">Build Your <br /><span class="gradient-text">AI-Powered</span> <br />Career Future</h1><p class="text-lg text-gray-600 max-w-lg leading-relaxed">Generate resumes, portfolios, quizzes, roadmaps, and more — powered by <strong>OpenRouter</strong> (supports Gemini, Llama, GPT‑4o‑mini, and more).</p><div class="flex flex-wrap gap-4"><button onclick="navigateTo('dashboard')" class="btn-primary text-base">🚀 Get Started</button><button onclick="navigateTo('dashboard')" class="btn-secondary text-base">▶ Explore</button></div></div></div></div></section>
-            <section class="py-16"><div class="max-w-7xl mx-auto px-4"><div class="glass rounded-3xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center border border-white/30"><div><div class="text-3xl font-extrabold gradient-text">50K+</div><div class="text-sm text-gray-500">Active Students</div></div><div><div class="text-3xl font-extrabold gradient-text">120K+</div><div class="text-sm text-gray-500">Resumes Generated</div></div><div><div class="text-3xl font-extrabold gradient-text">98%</div><div class="text-sm text-gray-500">Satisfaction Rate</div></div><div><div class="text-3xl font-extrabold gradient-text">4.9★</div><div class="text-sm text-gray-500">User Rating</div></div></div></div></section>
+            <section class="py-16"><div class="max-w-7xl mx-auto px-4"><div class="glass rounded-3xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center border border-white/30"><div><div class="text-3xl font-extrabold gradient-text">10+</div><div class="text-sm text-gray-500">Career Tools</div></div><div><div class="text-3xl font-extrabold gradient-text">AI</div><div class="text-sm text-gray-500">Career Guidance</div></div><div><div class="text-3xl font-extrabold gradient-text">100%</div><div class="text-sm text-gray-500">Student Focused</div></div><div><div class="text-3xl font-extrabold gradient-text">24/7</div><div class="text-sm text-gray-500">Self-Paced Learning</div></div></div></div></section>
         </div>
 
         <div id="page-dashboard" class="page active">
@@ -1102,8 +1140,21 @@
                 <div class="mt-3 text-xs text-gray-400 dark:text-gray-500">🔒 All routes are protected. You must be logged in to access tools.</div>
             </div>
 
-            <div class="mb-6"><h2 class="text-lg font-bold mb-3">⚡ Quick AI Tools</h2><div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3"><div class="quick-tool" onclick="navigateTo('resume')">📄<br><span class="text-sm font-medium">Resume</span></div><div class="quick-tool" onclick="navigateTo('portfolio')">🌐<br><span class="text-sm font-medium">Portfolio</span></div><div class="quick-tool" onclick="navigateTo('notes')">📝<br><span class="text-sm font-medium">Summarize</span></div><div class="quick-tool" onclick="navigateTo('quiz')">🧠<br><span class="text-sm font-medium">Quiz</span></div><div class="quick-tool" onclick="navigateTo('roadmap')">🗺️<br><span class="text-sm font-medium">Roadmap</span></div><div class="quick-tool" onclick="navigateTo('studyplanner')">📅<br><span class="text-sm font-medium">Planner</span></div></div></div>
+            <div class="mb-6"><h2 class="text-lg font-bold mb-3">⚡ Quick AI Tools</h2><div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3"><div class="quick-tool" onclick="navigateTo('resume')">📄<br><span class="text-sm font-medium">Resume</span></div><div class="quick-tool" onclick="navigateTo('portfolio')">🌐<br><span class="text-sm font-medium">Portfolio</span></div><div class="quick-tool" onclick="navigateTo('notes')">📝<br><span class="text-sm font-medium">Summarize</span></div><div class="quick-tool" onclick="navigateTo('quiz')">🧠<br><span class="text-sm font-medium">Quiz</span></div><div class="quick-tool" onclick="navigateTo('roadmap')">🗺️<br><span class="text-sm font-medium">Roadmap</span></div><div class="quick-tool" onclick="navigateTo('studyplanner')">📅<br><span class="text-sm font-medium">Planner</span></div><div class="quick-tool" onclick="navigateTo('careerai')">🤖<br><span class="text-sm font-medium">AI Coach</span></div><div class="quick-tool" onclick="navigateTo('assessment')">🧪<br><span class="text-sm font-medium">Assess</span></div><div class="quick-tool" onclick="navigateTo('interview')">🎤<br><span class="text-sm font-medium">Interview</span></div></div></div>
             <div class="card p-4 mb-6"><h3 class="font-semibold mb-2">📅 Upcoming Tasks</h3><ul class="space-y-3" id="taskList"><li class="flex items-center gap-3"><input type="checkbox" class="rounded border-gray-300" /><span class="text-sm">Complete resume</span><span class="ml-auto text-xs text-gray-400">Today</span></li><li class="flex items-center gap-3"><input type="checkbox" class="rounded border-gray-300" /><span class="text-sm">Study for AI quiz</span><span class="ml-auto text-xs text-gray-400">Tomorrow</span></li><li class="flex items-center gap-3"><input type="checkbox" class="rounded border-gray-300" /><span class="text-sm">Generate portfolio</span><span class="ml-auto text-xs text-gray-400">Wed</span></li></ul><button class="mt-3 text-sm text-indigo-600 dark:text-indigo-400 hover:underline" id="addTaskBtn">+ Add task</button></div>
+            <div class="card p-5 mb-6 career-command-card">
+                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                    <div>
+                        <div class="text-xs uppercase tracking-wider text-indigo-600 font-bold">Career Intelligence</div>
+                        <h2 class="text-2xl font-bold mt-1">Your next career move</h2>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Build your profile, measure your skills, practise interviews and discover opportunities from one dashboard.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button class="gradient-btn gradient-btn-sm" onclick="navigateTo('readiness')">🎯 Check Readiness</button>
+                        <button class="btn-secondary text-sm" onclick="navigateTo('careerai')">🤖 Ask AI Coach</button>
+                    </div>
+                </div>
+            </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6"><div class="card p-4"><h3 class="font-semibold mb-3">🕒 Recent Activity</h3><div class="space-y-3" id="activityFeed"><div class="activity-item text-sm"><div class="font-medium">Generated resume</div><div class="text-xs text-gray-500">2 hours ago</div></div><div class="activity-item text-sm"><div class="font-medium">Completed quiz: AI Basics</div><div class="text-xs text-gray-500">Yesterday</div></div><div class="activity-item text-sm"><div class="font-medium">Saved portfolio draft</div><div class="text-xs text-gray-500">2 days ago</div></div></div></div><div class="card p-4"><h3 class="font-semibold mb-3">📚 Study Progress</h3><div class="space-y-3"><div><div class="flex justify-between text-sm"><span>AI Engineer Roadmap</span><span>45%</span></div><div class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full"><div class="h-2 bg-indigo-500 rounded-full" style="width:45%"></div></div></div><div><div class="flex justify-between text-sm"><span>Data Science Prep</span><span>70%</span></div><div class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full"><div class="h-2 bg-emerald-500 rounded-full" style="width:70%"></div></div></div><div><div class="flex justify-between text-sm"><span>Frontend Development</span><span>25%</span></div><div class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full"><div class="h-2 bg-cyan-500 rounded-full" style="width:25%"></div></div></div></div><div class="mt-4 p-3 bg-indigo-50 dark:bg-indigo-950/20 rounded-lg flex justify-between items-center"><span class="text-sm">🔥 Weekly study streak: 4 days</span><span class="text-xs text-indigo-600 dark:text-indigo-400 font-medium">+2 this week</span></div></div></div>
         </div>
 
@@ -1396,6 +1447,164 @@
 
         <div id="page-settings" class="page"><div class="card p-6 max-w-2xl mx-auto"><h2 class="text-lg font-bold mb-4">⚙️ Settings</h2><div class="form-section"><h3 class="font-semibold mb-2">🤖 AI Provider</h3><div class="grid grid-cols-2 gap-2 mb-3"><button class="provider-btn px-3 py-2 rounded-lg border-2 border-indigo-500 bg-indigo-50 dark:bg-indigo-900/30 text-sm font-medium" data-provider="openrouter">🟣 OpenRouter</button><button class="provider-btn px-3 py-2 rounded-lg border-2 border-gray-300 dark:border-gray-600 hover:border-indigo-500 transition text-sm font-medium" data-provider="mock">🔄 Mock (No Key Needed)</button></div><div id="providerInfo" class="text-sm text-gray-500 dark:text-gray-400 mb-2"><span class="provider-badge mock">✅ No API Key Required</span> Using built-in high-quality mock for all topics.</div></div><div class="form-section"><h3 class="font-semibold mb-2">🔑 API Key (Optional)</h3><div class="api-key-hint"><p class="text-sm text-gray-700 dark:text-gray-300">💡 You do NOT need an API Key. The app works perfectly with a built-in Mock AI. If you have an OpenRouter key, you can paste it here.</p></div><div class="flex items-center gap-3"><input type="password" id="apiKeyInput" value="" placeholder="sk-or-v1-..." class="flex-1 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" /><button id="apiKeyToggle" class="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">👁️</button><button id="apiKeySaveBtn" class="gradient-btn gradient-btn-sm">Save</button></div><div class="mt-2 flex items-center gap-2 text-sm"><span id="apiStatusDot" class="api-status valid"></span><span id="apiStatusText" class="text-green-600 dark:text-green-400">✅ Using built-in Mock AI – No key needed</span></div></div><div class="form-section"><h3 class="font-semibold mb-2">🧠 Model</h3><select id="modelSelect" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm"><option value="mock" selected>Mock AI (No Key)</option><option value="google/gemini-2.0-flash-exp:free">Gemini 2.0 Flash (if key added)</option></select><div id="modelInfo" class="mt-1 text-xs text-gray-400 dark:text-gray-500">Mock mode active. Responds with rich, realistic data.</div></div><div class="flex items-center justify-between py-3 border-b border-gray-200 dark:border-gray-700"><span>Dark Mode</span><button id="settingsDarkToggle" class="toggle-track"><div class="toggle-thumb"></div></button></div><div class="flex items-center justify-between py-3"><span>Auto-save</span><button id="settingsAutosave" class="toggle-track active"><div class="toggle-thumb"></div></button></div><div class="mt-6 p-4 bg-gray-50 dark:bg-gray-800/30 rounded-lg"><p class="text-sm text-gray-500 dark:text-gray-400">Storage used: <span id="settingsStorage">0 KB</span></p><button class="gradient-btn gradient-btn-sm mt-2" id="settingsExportData">📤 Export All Data</button><button class="gradient-btn gradient-btn-sm ml-2 bg-red-500 hover:bg-red-600" id="settingsClearData">🗑️ Clear All Data</button></div></div></div>
 
+
+        <!-- ─── AI CAREER COACH ─── -->
+        <div id="page-careerai" class="page">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2 card p-4">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <div class="text-xs uppercase tracking-wider text-indigo-600 font-bold">AI Career Coach</div>
+                            <h2 class="text-xl font-bold">Ask about your career</h2>
+                        </div>
+                        <span class="provider-badge mock">Career guidance</span>
+                    </div>
+                    <div id="careerAiMessages" class="career-ai-messages">
+                        <div class="career-ai-bubble bot">👋 Hi! I can help you choose a career, build a roadmap, improve your resume, prepare for interviews and identify your next skill.</div>
+                    </div>
+                    <div class="career-ai-composer">
+                        <input id="careerAiInput" type="text" placeholder="e.g. What should I learn to become an AI/ML engineer?" />
+                        <button id="careerAiSend" class="gradient-btn">Send</button>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <button class="ai-chip" data-ai-prompt="Suggest a career path based on my profile.">🎯 Career suggestion</button>
+                        <button class="ai-chip" data-ai-prompt="Create a 6 month AI/ML learning roadmap.">🗺️ Roadmap</button>
+                        <button class="ai-chip" data-ai-prompt="How can I improve my resume for internships?">📄 Resume tips</button>
+                        <button class="ai-chip" data-ai-prompt="Give me 5 interview questions for a fresher.">🎤 Interview prep</button>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="card p-4">
+                        <h3 class="font-semibold mb-3">🧭 Personal Context</h3>
+                        <div class="space-y-3 text-sm">
+                            <div><span class="text-gray-500">Goal</span><div id="aiContextGoal" class="font-semibold">Not set</div></div>
+                            <div><span class="text-gray-500">Skills</span><div id="aiContextSkills" class="font-semibold">Add skills in Profile</div></div>
+                            <div><span class="text-gray-500">Readiness</span><div id="aiContextScore" class="font-semibold gradient-text">0/100</div></div>
+                        </div>
+                    </div>
+                    <div class="card p-4">
+                        <h3 class="font-semibold mb-2">⚡ Try asking</h3>
+                        <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+                            <li>• Which skill should I learn next?</li>
+                            <li>• How do I prepare for an internship?</li>
+                            <li>• Give me a project idea for my skill level.</li>
+                            <li>• How can I improve my interview score?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── CAREER READINESS ─── -->
+        <div id="page-readiness" class="page">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="card p-6 text-center">
+                    <div class="text-xs uppercase tracking-wider text-indigo-600 font-bold">Career Readiness</div>
+                    <div id="readinessScore" class="readiness-score">0</div>
+                    <div class="text-gray-500">out of 100</div>
+                    <div id="readinessRing" class="readiness-ring"><div id="readinessRingValue">0%</div></div>
+                    <p id="readinessMessage" class="text-sm text-gray-500 dark:text-gray-400 mt-3">Complete your profile and tools to improve your score.</p>
+                    <button class="gradient-btn mt-4" id="refreshReadinessBtn">🔄 Recalculate</button>
+                </div>
+                <div class="lg:col-span-2 card p-5">
+                    <h2 class="text-xl font-bold mb-4">📊 Readiness Breakdown</h2>
+                    <div id="readinessBreakdown" class="space-y-4"></div>
+                    <div class="mt-6 p-4 rounded-xl bg-indigo-50 dark:bg-indigo-950/20">
+                        <h3 class="font-semibold">💡 Recommended next step</h3>
+                        <p id="readinessNext" class="text-sm text-gray-600 dark:text-gray-400 mt-1">Complete your profile first.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── SKILL ASSESSMENT ─── -->
+        <div id="page-assessment" class="page">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2 card p-5">
+                    <div class="flex items-center justify-between mb-4">
+                        <div><div class="text-xs uppercase tracking-wider text-indigo-600 font-bold">Skill Assessment</div><h2 class="text-xl font-bold">Test your fundamentals</h2></div>
+                        <select id="assessmentTopic" class="px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+                            <option value="python">Python</option><option value="java">Java</option><option value="sql">SQL</option><option value="ai">AI & ML</option><option value="web">Web Development</option>
+                        </select>
+                    </div>
+                    <div id="assessmentProgress" class="text-sm text-gray-500 mb-3">Question 1 of 5</div>
+                    <div class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full mb-5"><div id="assessmentProgressBar" class="h-2 bg-indigo-500 rounded-full" style="width:20%"></div></div>
+                    <div id="assessmentQuestion" class="text-lg font-semibold mb-5"></div>
+                    <div id="assessmentOptions" class="grid gap-3"></div>
+                    <div id="assessmentResult" class="hidden mt-5 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/20"></div>
+                    <button id="assessmentRestart" class="btn-secondary mt-5 hidden">🔄 Try Again</button>
+                </div>
+                <div class="space-y-4">
+                    <div class="card p-4"><h3 class="font-semibold mb-2">📈 Your best scores</h3><div id="assessmentHistory" class="space-y-2 text-sm"></div></div>
+                    <div class="card p-4"><h3 class="font-semibold mb-2">🎯 Why assess?</h3><p class="text-sm text-gray-500 dark:text-gray-400">Use your results to identify skill gaps and choose the next topic on your roadmap.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── JOBS & INTERNSHIPS ─── -->
+        <div id="page-opportunities" class="page">
+            <div class="card p-4 mb-5">
+                <div class="flex flex-col md:flex-row gap-3">
+                    <input id="opportunitySearch" class="flex-1 px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800" placeholder="Search role, skill or company..." />
+                    <select id="opportunityType" class="px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800"><option value="all">All opportunities</option><option value="internship">Internships</option><option value="job">Jobs</option></select>
+                    <button class="gradient-btn" id="opportunitySearchBtn">🔎 Search</button>
+                </div>
+            </div>
+            <div class="flex items-center justify-between mb-3"><h2 class="text-xl font-bold">💼 Opportunities</h2><span class="text-sm text-gray-500">Demo data — connect a backend/API for live listings.</span></div>
+            <div id="opportunityList" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"></div>
+        </div>
+
+        <!-- ─── MOCK INTERVIEW ─── -->
+        <div id="page-interview" class="page">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2 card p-5">
+                    <div class="flex flex-col sm:flex-row gap-3 mb-4">
+                        <div class="input-group flex-1 mb-0"><label>Role</label><input id="interviewRole" value="AI/ML Intern" /></div>
+                        <div class="input-group flex-1 mb-0"><label>Difficulty</label><select id="interviewDifficulty"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></div>
+                    </div>
+                    <div id="interviewChat" class="career-ai-messages">
+                        <div class="career-ai-bubble bot">🎤 Welcome to your mock interview. Start when you're ready.</div>
+                    </div>
+                    <div class="career-ai-composer">
+                        <textarea id="interviewAnswer" rows="2" placeholder="Type your answer here..."></textarea>
+                        <button id="interviewSend" class="gradient-btn">Submit</button>
+                    </div>
+                    <button id="interviewStart" class="btn-primary mt-3">🚀 Start Interview</button>
+                    <button id="interviewReset" class="btn-secondary mt-3 ml-2">Reset</button>
+                </div>
+                <div class="card p-5">
+                    <h3 class="font-semibold mb-3">📊 Interview Score</h3>
+                    <div class="text-4xl font-extrabold gradient-text" id="interviewScore">0</div>
+                    <div class="text-sm text-gray-500 mt-1">Keep practising to improve.</div>
+                    <div class="mt-5 space-y-3 text-sm">
+                        <div class="flex justify-between"><span>Technical</span><span id="interviewTechnical">0%</span></div>
+                        <div class="flex justify-between"><span>Communication</span><span id="interviewCommunication">0%</span></div>
+                        <div class="flex justify-between"><span>Problem solving</span><span id="interviewProblem">0%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── PROJECT HUB ─── -->
+        <div id="page-projects" class="page">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="card p-5">
+                    <div class="text-xs uppercase tracking-wider text-indigo-600 font-bold">Project Builder</div>
+                    <h2 class="text-xl font-bold mb-4">Add a project</h2>
+                    <div class="input-group"><label>Project name</label><input id="projectName" placeholder="AI Notes Summarizer" /></div>
+                    <div class="input-group"><label>Technology</label><input id="projectTech" placeholder="Python, Firebase, JavaScript" /></div>
+                    <div class="input-group"><label>Description</label><textarea id="projectDescription" rows="3" placeholder="What problem does it solve?"></textarea></div>
+                    <div class="input-group"><label>GitHub URL</label><input id="projectGithub" placeholder="https://github.com/..." /></div>
+                    <div class="input-group"><label>Live Demo URL</label><input id="projectDemo" placeholder="https://..." /></div>
+                    <button class="gradient-btn w-full" id="projectAddBtn">➕ Add Project</button>
+                </div>
+                <div class="lg:col-span-2">
+                    <div class="flex items-center justify-between mb-3"><h2 class="text-xl font-bold">🛠️ My Projects</h2><span id="projectCount" class="text-sm text-gray-500">0 projects</span></div>
+                    <div id="projectList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                </div>
+            </div>
+        </div>
+
         <div class="mt-8 text-center text-xs text-gray-400 dark:text-gray-500 border-t border-gray-200 dark:border-gray-800 pt-4">
             © 2026 AI Student Career Hub · Powered by Firebase Auth · 
             Made by <strong class="text-indigo-600 dark:text-indigo-400">Mayuri Y. Sutar</strong> · 
@@ -1489,7 +1698,7 @@
 
         // ─── PAGE NAV ───
         const pageTitles = {
-            landing: 'Home', dashboard: 'Dashboard', profile: 'Profile',
+            landing: 'Home', dashboard: 'Dashboard', careerai: 'AI Career Coach', readiness: 'Career Readiness', assessment: 'Skill Assessment', opportunities: 'Jobs & Internships', interview: 'Mock Interview', projects: 'Project Hub', profile: 'Profile',
             resume: 'Resume Builder', portfolio: 'Portfolio Generator',
             notes: 'Notes Summarizer', quiz: 'Quiz Generator',
             flashcards: 'Flashcards', roadmap: 'Career Roadmap',
@@ -2817,6 +3026,264 @@ ${sentences.slice(0, 4).map(s => `• ${s.trim()}`).join('\n')}
         document.querySelectorAll('.provider-btn').forEach(b => {
             if (b.dataset.provider === savedProvider) b.click();
         });
+
+        // ═══════════════════════════════════════════════════════════════
+        // CAREER HUB V2 — Career Intelligence Layer
+        // ═══════════════════════════════════════════════════════════════
+        const V2 = {
+            get profile(){ return getLS('profile', {}); },
+            skills(){
+                return (this.profile.skills || '').split(',').map(s=>s.trim()).filter(Boolean);
+            },
+            escape(s){
+                return String(s ?? '').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+            }
+        };
+
+        // ─── CAREER READINESS ───
+        function calculateReadiness(){
+            const p=V2.profile, skills=V2.skills();
+            const resumes=getLS('resumes',[]), quizzes=getLS('quizHistory',[]), projects=getLS('careerProjects',[]);
+            const assessment=getLS('assessmentHistory',[]);
+            const interview=getLS('interviewStats',{score:0});
+            const profileScore=Math.round((['name','email','bio','skills','education'].filter(k=>String(p[k]||'').trim()).length/5)*100);
+            const skillScore=Math.min(100,skills.length*12);
+            const resumeScore=resumes.length?85:0;
+            const projectScore=Math.min(100,projects.length*25);
+            const assessmentScore=assessment.length?Math.max(...assessment.map(x=>x.score)):0;
+            const quizScore=quizzes.length?Math.max(...quizzes.map(x=>x.score)):0;
+            const interviewScore=interview.score||0;
+            const score=Math.round(profileScore*.2+skillScore*.15+resumeScore*.15+projectScore*.15+assessmentScore*.15+quizScore*.1+interviewScore*.1);
+            return {score,items:[
+                ['Profile',profileScore,'Complete your profile'],
+                ['Skills',skillScore,'Add the skills you can demonstrate'],
+                ['Resume',resumeScore,'Create and save a resume'],
+                ['Projects',projectScore,'Add real projects with links'],
+                ['Assessment',assessmentScore,'Complete a skill assessment'],
+                ['Quiz',quizScore,'Take an interactive quiz'],
+                ['Interview',interviewScore,'Practise a mock interview']
+            ]};
+        }
+        function renderReadiness(){
+            const r=calculateReadiness();
+            document.getElementById('readinessScore').textContent=r.score;
+            document.getElementById('readinessRingValue').textContent=r.score+'%';
+            document.getElementById('readinessRing').style.background=`conic-gradient(#4F46E5 ${r.score*3.6}deg,#38BDF8 ${r.score*3.6}deg,#e2e8f0 ${r.score*3.6}deg)`;
+            document.getElementById('readinessMessage').textContent=r.score>=80?'🚀 You are looking job-ready. Keep practising and applying.':r.score>=60?'💪 Good progress. Strengthen the lowest-scoring areas below.':'🌱 Build your foundation first, then keep increasing your score.';
+            const box=document.getElementById('readinessBreakdown');
+            box.innerHTML=r.items.map(([name,val,tip])=>`<div><div class="flex justify-between text-sm mb-1"><span class="font-medium">${name}</span><span class="font-bold">${val}%</span></div><div class="readiness-bar"><span style="width:${val}%"></span></div><div class="text-xs text-gray-400 mt-1">${val<70?tip:'On track'}</div></div>`).join('');
+            const lowest=[...r.items].sort((a,b)=>a[1]-b[1])[0];
+            document.getElementById('readinessNext').textContent=`Focus on ${lowest[0]} next: ${lowest[2]}.`;
+            return r;
+        }
+        document.getElementById('refreshReadinessBtn').addEventListener('click',()=>{renderReadiness();showToast('🎯 Readiness recalculated','success');});
+
+        // ─── AI CAREER COACH ───
+        function addCareerAiMessage(type,text){
+            const box=document.getElementById('careerAiMessages'), div=document.createElement('div');
+            div.className='career-ai-bubble '+type; div.textContent=text; box.appendChild(div); box.scrollTop=box.scrollHeight;
+        }
+        function careerCoachReply(q){
+            const p=V2.profile, skills=V2.skills(), r=calculateReadiness().score, lower=q.toLowerCase();
+            if(lower.includes('resume')) return `Start with a one-page resume. Highlight ${skills.slice(0,4).join(', ')||'your strongest technical skills'}, 2–3 projects, education and measurable achievements. For internships, tailor keywords to each job description and keep the layout simple and ATS-friendly.`;
+            if(lower.includes('interview')) return `Use a 3-part routine: 1) revise core concepts, 2) practise 5 role-specific questions daily, 3) explain one project aloud using Problem → Approach → Technology → Result. Your current Career Readiness score is ${r}/100.`;
+            if(lower.includes('roadmap')||lower.includes('learn')) return `A strong next-step sequence is: fundamentals → one programming language → SQL/Git → core role skills → 2 real projects → resume/portfolio → mock interviews → applications. For AI/ML, add Python, statistics, data handling, ML algorithms and model deployment.`;
+            if(lower.includes('project')) return `Choose a project that solves a real student problem. Good examples: AI Notes Summarizer, Student Career Matcher, Resume Analyzer or Placement Preparation Assistant. Include authentication, database storage, validation, analytics and a public demo.`;
+            if(lower.includes('career')||lower.includes('job')) return `Based on your current profile, first strengthen ${skills.slice(0,3).join(', ')||'your technical skills'}. Then compare 2–3 roles using required skills, project fit and your assessment results. Your current readiness is ${r}/100.`;
+            return `I can help with careers, roadmaps, skills, resumes, projects and interviews. Try: “What should I learn next?”, “Review my resume”, “Give me a project idea”, or “Prepare me for an interview.”`;
+        }
+        async function sendCareerAi(){
+            const input=document.getElementById('careerAiInput'), q=input.value.trim(); if(!q)return;
+            addCareerAiMessage('user',q); input.value='';
+            const send=document.getElementById('careerAiSend'); send.disabled=true; send.textContent='Thinking…';
+            await new Promise(r=>setTimeout(r,450));
+            addCareerAiMessage('bot',careerCoachReply(q));
+            send.disabled=false; send.textContent='Send';
+            const p=V2.profile; document.getElementById('aiContextGoal').textContent=p.careerGoal||'Not set';
+            document.getElementById('aiContextSkills').textContent=V2.skills().slice(0,5).join(', ')||'Add skills in Profile';
+            document.getElementById('aiContextScore').textContent=calculateReadiness().score+'/100';
+        }
+        document.getElementById('careerAiSend').addEventListener('click',sendCareerAi);
+        document.getElementById('careerAiInput').addEventListener('keydown',e=>{if(e.key==='Enter')sendCareerAi();});
+        document.querySelectorAll('.ai-chip').forEach(b=>b.addEventListener('click',()=>{document.getElementById('careerAiInput').value=b.dataset.aiPrompt;sendCareerAi();}));
+
+        // ─── SKILL ASSESSMENT ───
+        const assessmentBank={
+            python:[
+                ['Which keyword defines a function in Python?',['function','def','func','define'],1],
+                ['Which type is mutable?',['tuple','string','list','int'],2],
+                ['What does len([1,2,3]) return?',['2','3','4','Error'],1],
+                ['Which symbol starts a comment?',['//','#','<!--',';'],1],
+                ['Which library is widely used for numerical arrays?',['NumPy','Django','Flask','Tkinter'],0]],
+            java:[
+                ['Which keyword creates an object?',['new','class','this','object'],0],
+                ['Which method starts a Java program?',['run()','start()','main()','init()'],2],
+                ['Which is not a primitive type?',['int','boolean','String','double'],2],
+                ['Which concept allows one class to inherit another?',['Encapsulation','Inheritance','Abstraction','Compilation'],1],
+                ['Which collection stores key-value pairs?',['List','Set','Map','Queue'],2]],
+            sql:[
+                ['Which command retrieves data?',['SELECT','GET','FETCHALL','OPEN'],0],
+                ['Which clause filters rows?',['SORT BY','WHERE','GROUP','FILTER'],1],
+                ['Which command adds a new row?',['INSERT','ADD','UPDATE','CREATE'],0],
+                ['Which key uniquely identifies a row?',['Foreign key','Primary key','Candidate text','Index only'],1],
+                ['Which aggregate returns an average?',['SUM','COUNT','AVG','MEAN'],2]],
+            ai:[
+                ['Which is supervised learning?',['Clustering','Classification with labelled data','Random guessing','Compression'],1],
+                ['Which algorithm is used for classification?',['KNN','K-Means only','PCA only','Apriori only'],0],
+                ['What does overfitting mean?',['Model is too simple','Model memorizes training data and generalizes poorly','Data is missing','Training is skipped'],1],
+                ['What is a feature?',['An input variable','A password','A database server','A deployment file'],0],
+                ['Which is a deep learning framework?',['PyTorch','Excel','Git','Figma'],0]],
+            web:[
+                ['Which language structures web pages?',['HTML','SQL','Python','Java'],0],
+                ['Which styles a page?',['CSS','JSON','XML','CSV'],0],
+                ['Which adds browser interactivity?',['JavaScript','SQL','PHP only','Markdown'],0],
+                ['Which attribute provides an image path?',['src','href','path','url'],0],
+                ['Which API style commonly uses HTTP methods?',['REST','SMTP','FTP only','BIOS'],0]]
+        };
+        let assessmentState={topic:'python',index:0,score:0,answered:false};
+        function renderAssessmentHistory(){
+            const h=getLS('assessmentHistory',[]), box=document.getElementById('assessmentHistory');
+            box.innerHTML=h.length?h.slice().reverse().slice(0,6).map(x=>`<div class="flex justify-between p-2 rounded-lg bg-gray-50 dark:bg-gray-800/30"><span>${x.topic.toUpperCase()}</span><b>${x.score}%</b></div>`).join(''):'<span class="text-gray-400">No assessments yet.</span>';
+        }
+        function renderAssessment(){
+            const bank=assessmentBank[assessmentState.topic], q=bank[assessmentState.index];
+            document.getElementById('assessmentResult').classList.add('hidden');
+            document.getElementById('assessmentRestart').classList.add('hidden');
+            document.getElementById('assessmentProgress').textContent=`Question ${assessmentState.index+1} of ${bank.length}`;
+            document.getElementById('assessmentProgressBar').style.width=((assessmentState.index+1)/bank.length*100)+'%';
+            document.getElementById('assessmentQuestion').textContent=q[0];
+            const box=document.getElementById('assessmentOptions'); box.innerHTML='';
+            q[1].forEach((opt,i)=>{const b=document.createElement('button');b.className='text-left p-3 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-indigo-500 transition';b.textContent=String.fromCharCode(65+i)+'. '+opt;b.addEventListener('click',()=>answerAssessment(i));box.appendChild(b);});
+        }
+        function answerAssessment(choice){
+            if(assessmentState.answered)return; assessmentState.answered=true;
+            const bank=assessmentBank[assessmentState.topic],q=bank[assessmentState.index], buttons=[...document.getElementById('assessmentOptions').children];
+            buttons.forEach(b=>b.disabled=true);
+            if(choice===q[2]){assessmentState.score++;buttons[choice].classList.add('border-emerald-500');}else{buttons[choice].classList.add('border-red-500');buttons[q[2]].classList.add('border-emerald-500');}
+            setTimeout(()=>{
+                assessmentState.index++;
+                if(assessmentState.index>=bank.length){
+                    const pct=Math.round(assessmentState.score/bank.length*100),h=getLS('assessmentHistory',[]);
+                    h.push({topic:assessmentState.topic,score:pct,timestamp:new Date().toISOString()});setLS('assessmentHistory',h);
+                    document.getElementById('assessmentQuestion').textContent='Assessment complete 🎉';
+                    document.getElementById('assessmentOptions').innerHTML='';
+                    document.getElementById('assessmentResult').classList.remove('hidden');
+                    document.getElementById('assessmentResult').innerHTML=`<b>${pct}%</b> — ${pct>=80?'Excellent foundation.':pct>=60?'Good start. Review your weak areas.':'Keep practising the fundamentals.'}`;
+                    document.getElementById('assessmentRestart').classList.remove('hidden');
+                    renderAssessmentHistory();renderReadiness();
+                }else{assessmentState.answered=false;renderAssessment();}
+            },550);
+        }
+        document.getElementById('assessmentTopic').addEventListener('change',e=>{assessmentState={topic:e.target.value,index:0,score:0,answered:false};renderAssessment();});
+        document.getElementById('assessmentRestart').addEventListener('click',()=>{assessmentState={topic:document.getElementById('assessmentTopic').value,index:0,score:0,answered:false};renderAssessment();});
+        renderAssessment();renderAssessmentHistory();
+
+        // ─── OPPORTUNITIES ───
+        const opportunities=[
+            {type:'internship',role:'AI/ML Intern',company:'Innovation Lab',location:'Remote',skills:'Python • Machine Learning',match:94},
+            {type:'internship',role:'Java Developer Intern',company:'TechWorks',location:'Pune, India',skills:'Java • SQL • Git',match:88},
+            {type:'job',role:'Junior Python Developer',company:'CloudStack',location:'Bengaluru, India',skills:'Python • APIs • Git',match:82},
+            {type:'internship',role:'Data Science Intern',company:'DataNova',location:'Hybrid',skills:'Python • SQL • Pandas',match:90},
+            {type:'job',role:'Frontend Developer',company:'WebForge',location:'Remote',skills:'HTML • CSS • JavaScript',match:79},
+            {type:'internship',role:'UI/UX Design Intern',company:'Pixel Studio',location:'Mumbai, India',skills:'Figma • UX Research',match:74}
+        ];
+        function renderOpportunities(){
+            const q=document.getElementById('opportunitySearch').value.toLowerCase(), type=document.getElementById('opportunityType').value;
+            const list=opportunities.filter(o=>(type==='all'||o.type===type)&&`${o.role} ${o.company} ${o.location} ${o.skills}`.toLowerCase().includes(q));
+            document.getElementById('opportunityList').innerHTML=list.length?list.map((o,i)=>`<div class="card opportunity-card p-5"><div class="flex justify-between gap-2"><span class="text-xs uppercase tracking-wider text-indigo-600 font-bold">${o.type}</span><span class="match">${o.match}% match</span></div><h3 class="font-bold text-lg mt-2">${V2.escape(o.role)}</h3><p class="text-sm font-medium mt-1">${V2.escape(o.company)}</p><p class="text-xs text-gray-500 mt-2">📍 ${V2.escape(o.location)}</p><p class="text-xs text-gray-500 mt-1">🧩 ${V2.escape(o.skills)}</p><button class="gradient-btn gradient-btn-sm mt-4" data-save-op="${i}">🔖 Save</button></div>`).join(''):'<div class="card p-6 text-gray-500">No matching opportunities found.</div>';
+            document.querySelectorAll('[data-save-op]').forEach(btn=>btn.addEventListener('click',()=>{const saved=getLS('savedOpportunities',[]),o=opportunities[Number(btn.dataset.saveOp)];if(!saved.some(x=>x.role===o.role&&x.company===o.company)){saved.push({...o,savedAt:new Date().toISOString()});setLS('savedOpportunities',saved);showToast('🔖 Opportunity saved','success')}else showToast('Already saved','info');}));
+        }
+        document.getElementById('opportunitySearchBtn').addEventListener('click',renderOpportunities);
+        document.getElementById('opportunitySearch').addEventListener('input',renderOpportunities);
+        document.getElementById('opportunityType').addEventListener('change',renderOpportunities);
+        renderOpportunities();
+
+        // ─── PROJECT HUB ───
+        function renderProjects(){
+            const list=document.getElementById('projectList'), projects=getLS('careerProjects',[]);
+            document.getElementById('projectCount').textContent=`${projects.length} project${projects.length===1?'':'s'}`;
+            list.innerHTML=projects.length?projects.map((p,i)=>`<div class="card project-card-v2 p-5"><div class="flex justify-between gap-2"><h3 class="font-bold">${V2.escape(p.name)}</h3><button class="text-red-500" data-del-project="${i}">✕</button></div><p class="text-xs text-indigo-600 mt-1">${V2.escape(p.tech)}</p><p class="text-sm text-gray-600 dark:text-gray-400 mt-3">${V2.escape(p.description)}</p><div class="flex gap-3 mt-4">${p.github?`<a class="project-link" target="_blank" rel="noopener" href="${V2.escape(p.github)}">GitHub ↗</a>`:''}${p.demo?`<a class="project-link" target="_blank" rel="noopener" href="${V2.escape(p.demo)}">Live Demo ↗</a>`:''}</div></div>`).join(''):'<div class="card p-6 text-gray-500 md:col-span-2">No projects yet. Add your first project to improve your Career Readiness score.</div>';
+            document.querySelectorAll('[data-del-project]').forEach(b=>b.addEventListener('click',()=>{const a=getLS('careerProjects',[]);a.splice(Number(b.dataset.delProject),1);setLS('careerProjects',a);renderProjects();renderReadiness();showToast('Project removed','info');}));
+        }
+        document.getElementById('projectAddBtn').addEventListener('click',()=>{
+            const p={name:document.getElementById('projectName').value.trim(),tech:document.getElementById('projectTech').value.trim(),description:document.getElementById('projectDescription').value.trim(),github:document.getElementById('projectGithub').value.trim(),demo:document.getElementById('projectDemo').value.trim(),createdAt:new Date().toISOString()};
+            if(!p.name||!p.description){showToast('Add a project name and description','warning');return;}
+            const a=getLS('careerProjects',[]);a.push(p);setLS('careerProjects',a);
+            ['projectName','projectTech','projectDescription','projectGithub','projectDemo'].forEach(id=>document.getElementById(id).value='');
+            renderProjects();renderReadiness();showToast('🛠️ Project added','success');
+        });
+        renderProjects();
+
+        // ─── MOCK INTERVIEW ───
+        const interviewQs=[
+            'Tell me about yourself and the technical skills you are currently developing.',
+            'Explain one project you built. What problem did it solve and what was your contribution?',
+            'Describe a technical problem you faced and how you solved it.',
+            'Why do you want this internship/role?',
+            'What is one technology you want to learn next and why?'
+        ];
+        let interviewState={index:-1,total:0};
+        function resetInterview(){
+            interviewState={index:-1,total:0};
+            document.getElementById('interviewChat').innerHTML='<div class="career-ai-bubble bot">🎤 Welcome to your mock interview. Start when you are ready.</div>';
+            ['interviewScore','interviewTechnical','interviewCommunication','interviewProblem'].forEach(id=>document.getElementById(id).textContent=id==='interviewScore'?'0':'0%');
+            setLS('interviewStats',{score:0});
+        }
+        function startInterview(){
+            interviewState={index:0,total:0};
+            document.getElementById('interviewChat').innerHTML='';
+            addInterviewQuestion();
+        }
+        function addInterviewQuestion(){addInterviewMessage('bot',`Question ${interviewState.index+1}: ${interviewQs[interviewState.index]}`);}
+        function addInterviewMessage(type,text){const box=document.getElementById('interviewChat'),d=document.createElement('div');d.className='career-ai-bubble '+type;d.textContent=text;box.appendChild(d);box.scrollTop=box.scrollHeight;}
+        function scoreInterview(answer){
+            const len=answer.trim().length, score=Math.min(100,Math.round(35+len/3+(answer.includes('project')?10:0)+(answer.includes('because')?8:0)));
+            interviewState.total+=score;
+            const done=interviewState.index+1, avg=Math.round(interviewState.total/done);
+            document.getElementById('interviewScore').textContent=avg;
+            document.getElementById('interviewTechnical').textContent=Math.min(100,avg+3)+'%';
+            document.getElementById('interviewCommunication').textContent=Math.min(100,avg-2)+'%';
+            document.getElementById('interviewProblem').textContent=Math.min(100,avg+5)+'%';
+            setLS('interviewStats',{score:avg,answered:done});
+            return score;
+        }
+        document.getElementById('interviewStart').addEventListener('click',startInterview);
+        document.getElementById('interviewReset').addEventListener('click',resetInterview);
+        document.getElementById('interviewSend').addEventListener('click',()=>{
+            const input=document.getElementById('interviewAnswer'),answer=input.value.trim();
+            if(interviewState.index<0){showToast('Start the interview first','warning');return;}
+            if(!answer){showToast('Type an answer first','warning');return;}
+            addInterviewMessage('user',answer); const s=scoreInterview(answer); addInterviewMessage('bot',`Feedback: ${s>=75?'Strong answer.':'Good start — add a specific example, technology and measurable result.'}`);
+            input.value='';interviewState.index++;
+            if(interviewState.index<interviewQs.length){setTimeout(addInterviewQuestion,400)}else{addInterviewMessage('bot','🎉 Interview complete. Review your score and repeat the interview to improve.');renderReadiness();}
+        });
+
+        // ─── PROFILE GOAL EXTENSION ───
+        // Adds a career goal field to the existing profile without replacing the original form.
+        const profileCard=document.querySelector('#page-profile .card');
+        if(profileCard && !document.getElementById('profileCareerGoal')){
+            const wrap=document.createElement('div');wrap.className='input-group';
+            wrap.innerHTML='<label>Career Goal</label><input type="text" id="profileCareerGoal" placeholder="e.g. AI/ML Engineer, Java Developer" />';
+            const save=document.getElementById('saveProfileBtn');save.parentNode.insertBefore(wrap,save);
+            const p=V2.profile;document.getElementById('profileCareerGoal').value=p.careerGoal||'';
+            save.addEventListener('click',()=>{const p2=getLS('profile',{});p2.careerGoal=document.getElementById('profileCareerGoal').value.trim();setLS('profile',p2);});
+        }
+
+        // Refresh intelligence whenever dashboard is visited.
+        const originalNavigateTo=window.navigateTo;
+        window.navigateTo=function(page){
+            originalNavigateTo(page);
+            if(page==='readiness')renderReadiness();
+            if(page==='careerai'){
+                const p=V2.profile;
+                document.getElementById('aiContextGoal').textContent=p.careerGoal||'Not set';
+                document.getElementById('aiContextSkills').textContent=V2.skills().slice(0,5).join(', ')||'Add skills in Profile';
+                document.getElementById('aiContextScore').textContent=calculateReadiness().score+'/100';
+            }
+            if(page==='dashboard')setTimeout(()=>{try{renderReadiness()}catch(e){}},50);
+        };
+        renderReadiness();
+
     </script>
 </body>
 </html>
